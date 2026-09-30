@@ -756,8 +756,8 @@ img { max-width: 100%; display: block; }
   .nav-toggle { display: flex; }
   .main-nav {
     display: none;
-    position: absolute;
-    top: 60px;
+    position: fixed;
+    top: 61px;
     left: 0;
     right: 0;
     background: var(--white);
