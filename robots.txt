@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /get-quote/
+Disallow: /quote/
+
+Sitemap: https://scrapcarcheck.co.uk/sitemap.xml

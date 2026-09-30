@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrap Car Check | Get the Best Scrap Car Price in Seconds</title>
+  <meta name="description" content="Find out what your scrap car is worth instantly. Enter your reg plate, compare quotes from UK scrap dealers and get paid today. Free, no obligation.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://scrapcarcheck.co.uk/">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Scrap Car Check | Get the Best Scrap Car Price in Seconds">
+  <meta property="og:description" content="Enter your reg, compare scrap quotes from trusted UK dealers and get the best price for your car today.">
+  <meta property="og:url" content="https://scrapcarcheck.co.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://scrapcarcheck.co.uk/images/og.png">
+
+  <!-- Schema: WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Scrap Car Check",
+    "url": "https://scrapcarcheck.co.uk",
+    "description": "Free UK scrap car price comparison. Enter your reg plate to get instant quotes from authorised treatment facilities and scrap dealers.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://scrapcarcheck.co.uk/quote/?reg={reg}",
+      "query-input": "required name=reg"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="Scrap Car Check home">
+      <span class="logo-icon">♻</span>
+      <span class="logo-text">ScrapCarCheck<span class="logo-dot">.co.uk</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/scrap-car-prices/">Price Guide</a>
+      <a href="/guides/">Guides</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">🇬🇧 Compare UK Scrap Dealers in Seconds</div>
+    <h1>What's Your Scrap Car Worth?</h1>
+    <p class="hero-sub">Enter your reg plate and get instant quotes from up to 5 authorised scrap dealers. Free, no obligation, takes 60 seconds.</p>
+
+    <!-- REG LOOKUP FORM -->
+    <div class="reg-form-card" id="reg-form">
+      <form class="reg-form" onsubmit="lookupReg(event)">
+        <div class="reg-input-wrap">
+          <div class="reg-plate-icon">GB</div>
+          <input
+            type="text"
+            id="reg-input"
+            name="reg"
+            class="reg-input"
+            placeholder="e.g. AB12 CDE"
+            maxlength="8"
+            autocomplete="off"
+            autocapitalize="characters"
+            aria-label="Enter your vehicle registration"
+            required
+          >
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">
+          Get My Scrap Quote &rarr;
+        </button>
+      </form>
+      <p class="reg-form-note">No personal details needed to check your price</p>
+    </div>
+
+    <!-- VEHICLE DETAILS (shown after lookup) -->
+    <div class="vehicle-card hidden" id="vehicle-card">
+      <div class="vehicle-confirm">
+        <div class="vehicle-icon">🚗</div>
+        <div class="vehicle-details" id="vehicle-details"></div>
+        <button class="btn btn-ghost btn-sm" onclick="resetForm()">Not my car?</button>
+      </div>
+      <div class="quote-form-wrap">
+        <h2 class="quote-form-title">One last step — get your quotes</h2>
+        <form class="quote-form" onsubmit="getQuotes(event)">
+          <div class="form-row">
+            <label for="postcode">Your postcode</label>
+            <input type="text" id="postcode" name="postcode" placeholder="e.g. L1 1AA" maxlength="8" required autocomplete="postal-code">
+          </div>
+          <div class="form-row">
+            <label for="condition">Vehicle condition</label>
+            <select id="condition" name="condition" required>
+              <option value="">Select condition</option>
+              <option value="complete">Complete — all main parts present</option>
+              <option value="missing-parts">Some parts missing (wheels, cat, battery)</option>
+              <option value="accident">Accident damaged / non-runner</option>
+              <option value="fire">Fire or flood damaged</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="collection">Collection preference</label>
+            <select id="collection" name="collection" required>
+              <option value="">Select preference</option>
+              <option value="asap">As soon as possible</option>
+              <option value="this-week">This week</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Compare Scrap Quotes Free &rarr;
+          </button>
+          <p class="form-small">We share your enquiry with up to 5 licensed ATFs. No spam. No cold calls.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- QUOTES RESULTS (shown after form submit) -->
+    <div class="quotes-section hidden" id="quotes-section">
+      <h2 class="quotes-title">Your Scrap Quotes</h2>
+      <p class="quotes-sub" id="quotes-sub"></p>
+      <div class="quotes-grid" id="quotes-grid"></div>
+      <div class="quotes-disclaimer">
+        Prices are indicative and subject to physical inspection. All dealers are registered with the Environment Agency as Authorised Treatment Facilities (ATFs).
+      </div>
+    </div>
+
+    <!-- TRUST SIGNALS -->
+    <div class="trust-bar">
+      <div class="trust-item">✅ <span>Authorised ATFs only</span></div>
+      <div class="trust-item">✅ <span>Free collection included</span></div>
+      <div class="trust-item">✅ <span>Paid same day or next day</span></div>
+      <div class="trust-item">✅ <span>DVLA notification handled</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <h2 class="section-title">How Scrap Car Check Works</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter your reg</h3>
+        <p>We instantly pull your vehicle details from the DVLA so you never have to type make, model or year.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Compare quotes</h3>
+        <p>We send your enquiry to up to 5 licensed scrap dealers and show you ranked offers in seconds.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Get collected and paid</h3>
+        <p>Accept the best offer, book free collection, and get paid on the day or next day. We even handle your DVLA paperwork.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE GUIDE SNIPPET -->
+<section class="prices-section">
+  <div class="container">
+    <h2 class="section-title">Average Scrap Car Prices (UK, 2024)</h2>
+    <p class="section-sub">Scrap prices depend on the weight of your vehicle and the live scrap metal price. Here are current averages.</p>
+    <div class="prices-table-wrap">
+      <table class="prices-table">
+        <thead>
+          <tr>
+            <th>Vehicle Type</th>
+            <th>Weight (approx)</th>
+            <th>Average Scrap Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Small city car (e.g. Fiat 500)</td><td>~900 kg</td><td>£150 – £250</td></tr>
+          <tr><td>Supermini (e.g. Ford Fiesta)</td><td>~1,100 kg</td><td>£200 – £320</td></tr>
+          <tr><td>Family hatchback (e.g. Golf)</td><td>~1,300 kg</td><td>£240 – £380</td></tr>
+          <tr><td>Estate / saloon</td><td>~1,500 kg</td><td>£280 – £440</td></tr>
+          <tr><td>MPV / large car</td><td>~1,700 kg</td><td>£320 – £500</td></tr>
+          <tr><td>SUV / 4x4</td><td>~1,900 kg</td><td>£360 – £560</td></tr>
+          <tr><td>Van (small to medium)</td><td>~1,600 – 2,200 kg</td><td>£380 – £680</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prices-note">Prices updated monthly based on live scrap metal market data. <a href="/scrap-car-prices/">See the full price guide →</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <h2 class="section-title">Common Questions</h2>
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          How is the scrap price calculated?
+          <span class="faq-arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Scrap car prices are based primarily on the weight of your vehicle multiplied by the current scrap steel and non-ferrous metal price. Your car's make, model and condition also affect the final figure — some models retain parts value that adds to the scrap metal price.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Is collection really free?
+          <span class="faq-arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Yes. All dealers in our network offer free collection within their operating area. If you are outside a dealer's zone, they may charge a small collection fee, which will always be disclosed before you accept a quote.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Do I need the V5C (logbook) to scrap my car?
+          <span class="faq-arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>You do not need your V5C to scrap your car — a licensed ATF can still take it. However, you should tell the DVLA that you have scrapped the vehicle. Your scrapping dealer will usually give you a Certificate of Destruction (CoD) which you can use to notify the DVLA and claim any remaining tax.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          How quickly will I get paid?
+          <span class="faq-arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Most authorised scrap dealers pay by bank transfer on the day of collection or the next working day. Cash in hand is no longer legal for scrap metal sales in England, Scotland and Wales.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          Can I scrap a car that doesn't run?
+          <span class="faq-arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>Yes. All the dealers on our platform collect non-runners. They will use a flatbed truck or trailer. Just select "non-runner" or "accident damaged" when you fill in your condition, and your quotes will reflect this.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+          What happens to my car after it's scrapped?
+          <span class="faq-arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-a" hidden>
+          <p>All dealers on Scrap Car Check are registered Authorised Treatment Facilities (ATFs). They legally must depollute the car — draining all fluids safely — before crushing or shredding it. Recyclable parts are recovered and sold; the metal is smelted and reused. End-of-life vehicles in the UK must be processed this way under the ELV Regulations 2003.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to scrap your car?</h2>
+    <p>Takes 60 seconds. No personal details needed to get your price.</p>
+    <a href="#reg-form" class="btn btn-primary btn-lg" onclick="document.getElementById('reg-input').focus()">Get My Scrap Price →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">♻</span> <strong>ScrapCarCheck.co.uk</strong>
+      <p>Free UK scrap car price comparison. Compare quotes from licensed ATFs and get the best price for your end-of-life vehicle.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/scrap-car-prices/">Price Guide</a>
+      <a href="/guides/">Guides</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <p class="footer-legal">© 2024 ScrapCarCheck.co.uk. We are a price comparison service and do not provide scrap collection directly. All dealers are registered ATFs with the Environment Agency. Scrap metal transactions must be made by bank transfer under the Scrap Metal Dealers Act 2013.</p>
+  </div>
+</footer>
+
+<!-- SCHEMA: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the scrap price calculated?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Scrap car prices are based primarily on the weight of your vehicle multiplied by the current scrap steel and non-ferrous metal price. Your car's make, model and condition also affect the final figure." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is collection really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All dealers in our network offer free collection within their operating area. If you are outside a dealer's zone, they may charge a small collection fee, which will always be disclosed before you accept a quote." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need the V5C logbook to scrap my car?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You do not need your V5C to scrap your car. However, you should tell the DVLA that you have scrapped the vehicle. Your scrapping dealer will give you a Certificate of Destruction." }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly will I get paid?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most authorised scrap dealers pay by bank transfer on the day of collection or the next working day. Cash in hand is no longer legal for scrap metal sales." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I scrap a car that doesn't run?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All the dealers on our platform collect non-runners using a flatbed truck or trailer." }
+    }
+  ]
+}
+</script>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
