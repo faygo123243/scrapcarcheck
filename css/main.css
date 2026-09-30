@@ -263,13 +263,13 @@ img { max-width: 100%; display: block; }
 .btn-ghost:hover { background: var(--slate-100); }
 
 .btn-white {
-  background: white;
-  color: var(--green-dark);
+  background: #ffffff;
+  color: #0f4c2a !important;
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 .btn-white:hover {
-  background: var(--green-light);
-  color: var(--green-dark);
+  background: #dcfce7;
+  color: #0f4c2a !important;
   text-decoration: none;
 }
 
