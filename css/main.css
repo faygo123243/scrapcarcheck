@@ -263,12 +263,12 @@ img { max-width: 100%; display: block; }
 .btn-ghost:hover { background: var(--slate-100); }
 
 .btn-white {
-  background: #ffffff;
+  background: #ffffff !important;
   color: #0f4c2a !important;
   box-shadow: 0 4px 14px rgba(0,0,0,0.15);
 }
 .btn-white:hover {
-  background: #dcfce7;
+  background: #dcfce7 !important;
   color: #0f4c2a !important;
   text-decoration: none;
 }
@@ -557,6 +557,7 @@ img { max-width: 100%; display: block; }
 
 .prices-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
   background: var(--white);
   font-size: 0.95rem;
@@ -776,4 +777,15 @@ img { max-width: 100%; display: block; }
   .how-section, .prices-section, .faq-section { padding: 56px 0; }
   .quote-card { flex-direction: column; align-items: flex-start; gap: 12px; }
   .quote-price { font-size: 1.4rem; }
+  /* CTA band tighter on mobile */
+  .cta-band { padding: 52px 0; }
+  .cta-band h2 { font-size: 1.6rem; }
+  /* Button sizing on mobile */
+  .btn-lg { padding: 15px 26px; font-size: 1rem; }
+  /* Footer stacks neatly */
+  .footer-links { gap: 10px 20px; }
+  /* Prices table readable label */
+  .prices-table th, .prices-table td { padding: 12px 14px; font-size: 0.88rem; }
+  /* Section title */
+  .section-title { font-size: 1.5rem; }
 }
