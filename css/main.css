@@ -26,22 +26,8 @@
   --font: 'Inter', -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --slate-900: #f8fafc;
-    --slate-800: #f1f5f9;
-    --slate-700: #e2e8f0;
-    --slate-600: #cbd5e1;
-    --slate-400: #64748b;
-    --slate-200: #334155;
-    --slate-100: #1e293b;
-    --slate-50: #0f172a;
-    --white: #1e293b;
-    --green-light: #052e16;
-    --green-mid: #14532d;
-    --yellow-light: #1c1002;
-  }
-}
+/* Force light mode always — dark mode vars never apply */
+/* @media (prefers-color-scheme: dark) block intentionally removed */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -241,7 +227,7 @@ img { max-width: 100%; display: block; }
 
 .btn-primary {
   background: var(--green);
-  color: var(--white);
+  color: #ffffff;
   box-shadow: 0 4px 14px rgba(22,163,74,0.35);
 }
 
