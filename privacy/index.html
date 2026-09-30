@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,9 @@
   <div class="container header-inner">
     <a href="/" class="logo"><span class="logo-icon">♻</span><span class="logo-text">ScrapCarCheck<span class="logo-dot">.co.uk</span></span></a>
     <nav class="main-nav"><a href="/how-it-works/">How It Works</a><a href="/scrap-car-prices/">Price Guide</a><a href="/guides/">Guides</a></nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 <div class="page-hero"><div class="container"><h1>Privacy Policy</h1><p>Last updated: October 2024</p></div></div>
@@ -33,13 +36,13 @@
   <h2>What information we collect</h2>
   <p>When you use our quote service, we collect the following information:</p>
   <ul>
-    <li>Your vehicle registration number (used to look up your vehicle from the DVLA API)</li>
+    <li>Your vehicle registration number (used to identify your vehicle)</li>
     <li>Your postcode (used to match you with local dealers)</li>
-    <li>Vehicle condition and collection preference (used to generate accurate quotes)</li>
+    <li>Vehicle condition (used to generate accurate quotes)</li>
+    <li>Your name and mobile number (shared with dealers so they can contact you directly)</li>
   </ul>
-  <p>We do not collect your name, email address or phone number at the quote stage. If you proceed to book a collection, the dealer you choose will collect your contact details directly under their own privacy policy.</p>
   <h2>How we use your information</h2>
-  <p>We use your vehicle registration number solely to retrieve publicly available DVLA data (make, model, fuel type) in order to provide you with an accurate quote. We share your postcode, vehicle details and condition with up to five dealers in our network so they can prepare a quote.</p>
+  <p>We share your registration, postcode, vehicle condition, name and phone number with up to three licensed ATF dealers in our network so they can prepare a quote and contact you directly. We do not sell your data to third parties outside our dealer network.</p>
   <h2>Cookies</h2>
   <p>We use only essential session cookies required for the site to function. We do not use advertising or tracking cookies.</p>
   <h2>Your rights</h2>
@@ -50,7 +53,8 @@
 <footer class="site-footer"><div class="container footer-inner">
   <div class="footer-brand"><span class="logo-icon">♻</span> <strong>ScrapCarCheck.co.uk</strong></div>
   <nav class="footer-links"><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a></nav>
-  <p class="footer-legal">© 2024 ScrapCarCheck.co.uk.</p>
+  <p class="footer-legal">© 2026 ScrapCarCheck.co.uk.</p>
 </div></footer>
+<script src="/js/main.js"></script>
 </body>
 </html>

@@ -51,6 +51,9 @@
       <a href="/scrap-car-prices/">Price Guide</a>
       <a href="/guides/">Guides</a>
     </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -58,7 +61,7 @@
 <main>
 <section class="hero">
   <div class="container">
-    <div class="hero-badge">🇬🇧 Compare UK Scrap Dealers in Seconds</div>
+    <div class="hero-badge">&#x1F1EC;&#x1F1E7; Compare UK Scrap Dealers in Seconds</div>
     <h1>What's Your Scrap Car Worth?</h1>
     <p class="hero-sub">Enter your reg plate and get instant quotes from up to 5 authorised scrap dealers. Free, no obligation, takes 60 seconds.</p>
 
@@ -112,31 +115,23 @@
             </select>
           </div>
           <div class="form-row">
-            <label for="collection">Collection preference</label>
-            <select id="collection" name="collection" required>
-              <option value="">Select preference</option>
-              <option value="asap">As soon as possible</option>
-              <option value="this-week">This week</option>
-              <option value="flexible">Flexible</option>
-            </select>
+            <label for="lead-name">Your name</label>
+            <input type="text" id="lead-name" name="name" placeholder="e.g. John Smith" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="lead-phone">Mobile number</label>
+            <input type="tel" id="lead-phone" name="phone" placeholder="e.g. 07700 900000" required autocomplete="tel">
           </div>
           <button type="submit" class="btn btn-primary btn-full">
             Compare Scrap Quotes Free &rarr;
           </button>
-          <p class="form-small">We share your enquiry with up to 5 licensed ATFs. No spam. No cold calls.</p>
+          <p class="form-small">Your details are shared only with licensed ATFs. No spam, no cold calls from us.</p>
         </form>
       </div>
     </div>
 
     <!-- QUOTES RESULTS (shown after form submit) -->
-    <div class="quotes-section hidden" id="quotes-section">
-      <h2 class="quotes-title">Your Scrap Quotes</h2>
-      <p class="quotes-sub" id="quotes-sub"></p>
-      <div class="quotes-grid" id="quotes-grid"></div>
-      <div class="quotes-disclaimer">
-        Prices are indicative and subject to physical inspection. All dealers are registered with the Environment Agency as Authorised Treatment Facilities (ATFs).
-      </div>
-    </div>
+    <div class="quotes-section hidden" id="quotes-section"></div>
 
     <!-- TRUST SIGNALS -->
     <div class="trust-bar">
@@ -175,7 +170,7 @@
 <!-- PRICE GUIDE SNIPPET -->
 <section class="prices-section">
   <div class="container">
-    <h2 class="section-title">Average Scrap Car Prices (UK, 2024)</h2>
+    <h2 class="section-title">Average Scrap Car Prices (UK, 2026)</h2>
     <p class="section-sub">Scrap prices depend on the weight of your vehicle and the live scrap metal price. Here are current averages.</p>
     <div class="prices-table-wrap">
       <table class="prices-table">
@@ -269,7 +264,7 @@
   <div class="container">
     <h2>Ready to scrap your car?</h2>
     <p>Takes 60 seconds. No personal details needed to get your price.</p>
-    <a href="#reg-form" class="btn btn-primary btn-lg" onclick="document.getElementById('reg-input').focus()">Get My Scrap Price →</a>
+    <a href="#reg-form" class="btn btn-white btn-lg" onclick="document.getElementById('reg-input').focus()">Get My Scrap Price &rarr;</a>
   </div>
 </section>
 
@@ -289,7 +284,7 @@
       <a href="/privacy/">Privacy Policy</a>
       <a href="/contact/">Contact</a>
     </nav>
-    <p class="footer-legal">© 2024 ScrapCarCheck.co.uk. We are a price comparison service and do not provide scrap collection directly. All dealers are registered ATFs with the Environment Agency. Scrap metal transactions must be made by bank transfer under the Scrap Metal Dealers Act 2013.</p>
+    <p class="footer-legal">© 2026 ScrapCarCheck.co.uk. We are a price comparison service and do not provide scrap collection directly. All dealers are registered ATFs with the Environment Agency. Scrap metal transactions must be made by bank transfer under the Scrap Metal Dealers Act 2013.</p>
   </div>
 </footer>
 
