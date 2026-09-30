@@ -176,15 +176,28 @@ img { max-width: 100%; display: block; }
   background: #1e40af;
   color: white;
   font-weight: 800;
-  font-size: 0.75rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 0 10px;
-  letter-spacing: 0.05em;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
+  justify-content: center;
+  padding: 0 8px;
   border-right: 3px solid #f59e0b;
+  min-width: 36px;
+  gap: 1px;
+}
+
+.gb-stars {
+  font-size: 0.38rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: #f59e0b;
+}
+
+.gb-text {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
 }
 
 .reg-input {
