@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Happens to Your Car When You Scrap It? | ScrapCarCheck</title>
+  <meta name="description" content="Ever wondered what actually happens to your car after you scrap it? We explain the full ATF process, from collection to crushing, and how much gets recycled.">
+  <link rel="canonical" href="https://scrapcarcheck.co.uk/what-happens-to-scrapped-cars/">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    /* PAGE LAYOUT */
+    .page-hero {
+      background: linear-gradient(160deg, #0f4c2a 0%, #16a34a 60%, #22c55e 100%);
+      padding: 56px 0 60px;
+      text-align: center;
+      color: #fff;
+    }
+    .page-hero h1 {
+      font-size: clamp(1.75rem, 4.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+    .page-hero .hero-sub {
+      font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .breadcrumb {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 20px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,0.75); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; text-decoration: underline; }
+
+    /* ARTICLE LAYOUT */
+    .article-wrap {
+      padding: 56px 0 72px;
+    }
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    @media (max-width: 820px) {
+      .article-grid { grid-template-columns: 1fr; }
+      .article-sidebar { display: none; }
+    }
+
+    /* PROSE */
+    .prose { min-width: 0; }
+    .prose p {
+      color: var(--slate-700);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 1.02rem;
+    }
+    .prose h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin: 44px 0 14px;
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+    .prose h2:first-of-type { margin-top: 0; }
+    .prose h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin: 24px 0 10px;
+    }
+    .prose ul, .prose ol {
+      margin: 8px 0 18px 24px;
+      color: var(--slate-700);
+    }
+    .prose li { line-height: 1.75; margin-bottom: 6px; }
+    .prose strong { color: var(--slate-900); font-weight: 600; }
+    .prose a { color: var(--green-dark); }
+    .prose a:hover { text-decoration: underline; }
+
+    /* PROCESS STEPS */
+    .process-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    .step-badge {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-top: 2px;
+    }
+
+    /* CALLOUT BOXES */
+    .info-box {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .info-box p { margin: 0; color: var(--slate-700); font-size: 0.95rem; }
+    .info-box p + p { margin-top: 8px; }
+
+    .warning-box {
+      background: #fef9c3;
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .warning-box p { margin: 0; color: var(--slate-700); font-size: 0.95rem; }
+
+    /* STAT CHIPS */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+    @media (max-width: 540px) {
+      .stat-row { grid-template-columns: 1fr 1fr; }
+    }
+    .stat-chip {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 18px 16px;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .stat-chip .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--green-dark);
+      display: block;
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-chip .stat-label {
+      font-size: 0.78rem;
+      color: var(--slate-500);
+      margin-top: 4px;
+      font-weight: 500;
+      display: block;
+    }
+
+    /* MATERIALS TABLE */
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    .materials-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 420px;
+    }
+    .materials-table th {
+      background: var(--slate-800);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .materials-table th:first-child { border-radius: 8px 0 0 0; }
+    .materials-table th:last-child { border-radius: 0 8px 0 0; }
+    .materials-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--slate-200);
+      color: var(--slate-700);
+      vertical-align: top;
+    }
+    .materials-table tr:last-child td { border-bottom: none; }
+    .materials-table tr:nth-child(even) td { background: var(--slate-50); }
+    .rate-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .rate-high { background: #dcfce7; color: #15803d; }
+    .rate-mid { background: #fef9c3; color: #92400e; }
+    .rate-var { background: var(--slate-100); color: var(--slate-600); }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      background: linear-gradient(135deg, #0f4c2a, #16a34a);
+      border-radius: 16px;
+      padding: 36px 32px;
+      text-align: center;
+      margin: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .pull-quote::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-size: 9rem;
+      color: rgba(255,255,255,0.08);
+      font-family: Georgia, serif;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .pull-quote blockquote {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.65;
+      max-width: 640px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .pull-quote .quote-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 56px 0;
+    }
+    .cta-band h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-band p { opacity: 0.9; margin-bottom: 28px; font-size: 1.05rem; }
+
+    /* SIDEBAR */
+    .article-sidebar {
+      min-width: 0;
+    }
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+    }
+    .sidebar-card h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .toc-list li { margin-bottom: 0; }
+    .toc-list a {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--slate-600);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--slate-100);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover { color: var(--green-dark); text-decoration: none; }
+    .toc-list li:last-child a { border-bottom: none; }
+    .sidebar-cta {
+      background: linear-gradient(160deg, #0f4c2a, #16a34a);
+      border-radius: 14px;
+      padding: 24px;
+      color: #fff;
+      text-align: center;
+    }
+    .sidebar-cta h3 { color: #fff; font-size: 1rem; margin-bottom: 8px; text-transform: none; letter-spacing: 0; }
+    .sidebar-cta p { font-size: 0.85rem; opacity: 0.9; margin-bottom: 16px; }
+    .sidebar-cta .btn { font-size: 0.9rem; }
+
+    /* SECTION DIVIDER */
+    .section-divider {
+      border: none;
+      border-top: 2px solid var(--slate-100);
+      margin: 40px 0;
+    }
+
+    /* ICON STEP */
+    .icon-step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin: 24px 0;
+    }
+    .icon-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .icon-step-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--green-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .icon-step-body h3 { margin: 0 0 6px; font-size: 1rem; font-weight: 700; color: var(--slate-900); }
+    .icon-step-body p { margin: 0; font-size: 0.92rem; color: var(--slate-600); line-height: 1.65; }
+
+    /* META */
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 24px 0 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--slate-100);
+    }
+    .meta-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      background: var(--green-light);
+      padding: 4px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .meta-detail {
+      font-size: 0.82rem;
+      color: var(--slate-400);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: var(--slate-900);
+      color: var(--slate-400);
+      padding: 40px 0 32px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 24px;
+    }
+    @media (max-width: 640px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 16px; }
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 4px; }
+    .footer-brand strong { color: var(--white); font-size: 1rem; }
+    .footer-brand p { font-size: 0.82rem; margin: 0; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: var(--slate-400); font-size: 0.85rem; text-decoration: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-legal { font-size: 0.78rem; white-space: nowrap; }
+
+    /* NAV TOGGLE */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--slate-700);
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    @media (max-width: 680px) {
+      .nav-toggle { display: flex; }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 16px;
+        border-top: 1px solid var(--slate-200);
+        border-bottom: 1px solid var(--slate-200);
+        gap: 4px;
+        z-index: 99;
+      }
+      .main-nav.open { display: flex; }
+      .main-nav a { padding: 10px 8px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Happens When You Scrap Your Car?",
+    "description": "The complete guide to what happens to your car at an Authorised Treatment Facility. From depollution to shredding, recycling and your Certificate of Destruction.",
+    "author": { "@type": "Organization", "name": "Scrap Car Check" },
+    "publisher": { "@type": "Organization", "name": "Scrap Car Check", "url": "https://scrapcarcheck.co.uk" },
+    "url": "https://scrapcarcheck.co.uk/what-happens-to-scrapped-cars/",
+    "datePublished": "2026-10-01",
+    "mainEntityOfPage": "https://scrapcarcheck.co.uk/what-happens-to-scrapped-cars/"
+  }
+  </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="Scrap Car Check home">
+      <span class="logo-icon">♻</span>
+      <span class="logo-text">ScrapCarCheck<span class="logo-dot">.co.uk</span></span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/scrap-car-prices/">Price Guide</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#reg-form" class="nav-cta">Get a Quote</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="/">Home</a> › <a href="/guides/">Guides</a> › What Happens When You Scrap Your Car?</p>
+    <h1>What Happens When You Scrap Your Car?</h1>
+    <p class="hero-sub">From the moment your car is collected to its final state. Here is the complete picture.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="article-wrap">
+  <div class="container">
+    <div class="article-grid">
+
+      <!-- PROSE -->
+      <article class="prose">
+
+        <div class="article-meta">
+          <span class="meta-tag">Educational</span>
+          <span class="meta-detail">8 minute read</span>
+          <span class="meta-detail">Updated October 2026</span>
+        </div>
+
+        <p>Most people hand over their keys, watch the vehicle get loaded onto a flatbed, and assume that is the end of the story. In reality, a scrapped car goes through a carefully regulated process with several distinct stages before any part of it becomes something new. The UK has some of the strictest rules in the world governing end of life vehicles, and understanding how it all works helps you make sure your car is handled correctly and that you get every protection the law entitles you to.</p>
+
+        <!-- SECTION 1 -->
+        <h2 id="collection">The Day of Collection</h2>
+        <p>When the Authorised Treatment Facility driver arrives at your address, the process starts with an identity and documentation check. The driver will verify your name against the vehicle registration and may ask for proof of identity such as a driving licence, passport or utility bill. This is a legal requirement, not a formality. It protects both you and the ATF from vehicles being handed over fraudulently.</p>
+        <p>Once the check is done, you receive a receipt confirming collection. The driver loads the vehicle onto a transporter and, in most cases, takes the V5C logbook from you at this point. You tear off the yellow section 9 slip and keep it as your temporary record. The main green portion goes with the driver to be forwarded to the DVLA.</p>
+
+        <div class="info-box">
+          <p><strong>Your Certificate of Destruction (CoD):</strong> This is the most important document you will receive. Under the End of Life Vehicles Regulations 2003, a licensed ATF is legally required to issue you a CoD within 7 days of taking the vehicle. It confirms the car has been legally destroyed and permanently removes your legal responsibility for it. If you do not receive one within two weeks, follow up in writing. Keep it indefinitely.</p>
+        </div>
+
+        <p>The CoD is not the same as a receipt. It is an official record held by both you and the ATF. If questions arise later about the vehicle, for insurance purposes, DVLA queries, or any other reason, this is the document you will need.</p>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 2 -->
+        <h2 id="atf">Arrival at the ATF</h2>
+        <p>An Authorised Treatment Facility is a site that has been licensed and registered by the Environment Agency to legally process vehicles at the end of their life. The Environment Agency maintains a public register of every ATF in the UK, and only registered facilities can legally issue a Certificate of Destruction.</p>
+        <p>When your vehicle arrives at the ATF, it is logged into the facility's system. The Vehicle Identification Number (VIN) is recorded and checked against the DVLA database, and the DVLA is notified electronically that the vehicle has been received. This is what triggers the removal of the car from the register in your name. It is also what stops road tax demands and any future liability from being sent to you.</p>
+        <p>The facility team will then assess the vehicle, taking account of its age, make, model, weight and condition, before deciding the order in which it moves through the process.</p>
+
+        <div class="info-box">
+          <p><strong>Only ATFs can issue a CoD.</strong> If you sell or give your car to an unlicensed yard, or to someone claiming to be a scrap dealer who is not registered, you will not receive a Certificate of Destruction. The DVLA may continue to hold you responsible for the vehicle even after it has gone.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 3 -->
+        <h2 id="depollution">Depollution</h2>
+        <p>This is the step that separates a licensed ATF from an illegal backstreet operation. Depollution is a legal requirement under the End of Life Vehicles Regulations 2003, and it must be completed before anything else happens to the car body.</p>
+        <p>A trained technician removes every fluid from the vehicle, including:</p>
+        <ul>
+          <li>Engine oil</li>
+          <li>Coolant and antifreeze</li>
+          <li>Brake fluid</li>
+          <li>Fuel (petrol or diesel)</li>
+          <li>Air conditioning refrigerant</li>
+          <li>Battery acid (from the 12v battery and, where applicable, high voltage EV battery packs)</li>
+          <li>Windscreen washer fluid</li>
+          <li>Hydraulic fluid from power steering systems</li>
+        </ul>
+        <p>Airbags are deactivated either electronically or by controlled detonation. Pyrotechnic seatbelt pretensioners are discharged. These components cannot go into a shredder safely, and handling them incorrectly is both dangerous and illegal.</p>
+        <p>The depollution stage typically takes between 30 and 45 minutes per vehicle. The fluids recovered are processed through specialist waste contractors. None of them go to landfill. Many are reclaimed and reprocessed for further use.</p>
+
+        <div class="warning-box">
+          <p><strong>Why this matters:</strong> An unlicensed yard that skips depollution allows those fluids to leak into the ground. Engine oil alone can contaminate thousands of litres of drinking water per litre spilled. The Environment Agency prosecutes illegal operators, but the damage is often already done before enforcement catches up.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 4 -->
+        <h2 id="parts">Parts Salvage</h2>
+        <p>Once depolluted, the vehicle is assessed for reusable parts. Experienced dismantlers work through the car systematically, removing components that still have working life in them and a market among repairers and private buyers. Commonly salvaged parts include:</p>
+
+        <div class="icon-step-list">
+          <div class="icon-step">
+            <div class="icon-step-icon">⚙️</div>
+            <div class="icon-step-body">
+              <h3>Engines and gearboxes</h3>
+              <p>If the engine runs or can be rebuilt, it goes to a specialist remanufacturer or is listed on the used parts market. A working engine can be worth considerably more than its weight in scrap steel.</p>
+            </div>
+          </div>
+          <div class="icon-step">
+            <div class="icon-step-icon">🔩</div>
+            <div class="icon-step-body">
+              <h3>Catalytic converters</h3>
+              <p>These contain platinum group metals (platinum, palladium, rhodium) and are among the most valuable parts on any petrol or diesel vehicle. A catalytic converter from a larger engine can be worth several hundred pounds on its own.</p>
+            </div>
+          </div>
+          <div class="icon-step">
+            <div class="icon-step-icon">🛞</div>
+            <div class="icon-step-body">
+              <h3>Alloy wheels</h3>
+              <p>Alloys in good condition are cleaned and refurbished for resale. Steel wheels with useable tyres may also be sold. Worn tyres go to specialist recyclers.</p>
+            </div>
+          </div>
+          <div class="icon-step">
+            <div class="icon-step-icon">💻</div>
+            <div class="icon-step-body">
+              <h3>Electronics and ECUs</h3>
+              <p>Infotainment units, control modules, sensors and other electronics in working order are removed and tested before going onto the used parts market. On newer vehicles, these components can be particularly valuable.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>The value of salvageable parts feeds indirectly into the scrap quote you received. A car with a working engine, good alloys and an intact catalytic converter will generally attract a higher offer from a reputable ATF than one with everything stripped already.</p>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 5 -->
+        <h2 id="shredding">Shredding and Separation</h2>
+        <p>What remains after depollution and parts removal is the car body: the shell, chassis and remaining metal structure. This goes to a shredder, which is essentially an enormous industrial hammer mill that reduces the vehicle to small mixed pieces in a matter of seconds.</p>
+        <p>The output from the shredder is known as Auto Shredder Residue (ASR), and it is anything but homogeneous. The ASR then goes through a sophisticated separation process:</p>
+        <ul>
+          <li><strong>Magnetic separation</strong> pulls out ferrous metals (primarily steel). This happens immediately after shredding and captures the majority of the vehicle's mass.</li>
+          <li><strong>Eddy current separation</strong> uses a rotating magnetic field to repel metals such as aluminium and copper that are not attracted by magnets, separating them from the mixed material stream.</li>
+          <li><strong>Density separation</strong> (using air or water) splits lighter materials like foam and plastic from heavier fragments.</li>
+          <li><strong>Optical sorting</strong> and manual sorting at some facilities identify specific materials for targeted recycling streams.</li>
+        </ul>
+        <p>Modern facilities process this entire flow with very little human intervention. The result is sorted fractions of steel, aluminium, copper, plastic and glass, each destined for a specific recycling pathway.</p>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 6 -->
+        <h2 id="recycling">What Gets Recycled</h2>
+        <p>The UK has been subject to progressively tightening recycling targets for vehicles at the end of their life, first under the EU ELV Directive and now under domestic legislation that carried those standards forward. Here is how the main materials fare:</p>
+
+        <div class="table-wrap">
+          <table class="materials-table" aria-label="Vehicle material recycling rates">
+            <thead>
+              <tr>
+                <th>Material</th>
+                <th>Where it comes from</th>
+                <th>Recycling rate</th>
+                <th>What it becomes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Steel</strong></td>
+                <td>Body panels, chassis, frame</td>
+                <td><span class="rate-pill rate-high">Near 100%</span></td>
+                <td>New steel products via electric arc furnace</td>
+              </tr>
+              <tr>
+                <td><strong>Aluminium</strong></td>
+                <td>Engine block, wheels, trim</td>
+                <td><span class="rate-pill rate-high">Near 100%</span></td>
+                <td>Remelted into new aluminium (saves 95% of production energy)</td>
+              </tr>
+              <tr>
+                <td><strong>Copper</strong></td>
+                <td>Wiring loom, motor windings</td>
+                <td><span class="rate-pill rate-high">High recovery</span></td>
+                <td>Refined copper for new electrical components</td>
+              </tr>
+              <tr>
+                <td><strong>Glass</strong></td>
+                <td>Windscreen, windows</td>
+                <td><span class="rate-pill rate-high">High recovery</span></td>
+                <td>Crushed cullet used in new glass or construction aggregates</td>
+              </tr>
+              <tr>
+                <td><strong>Plastics</strong></td>
+                <td>Dashboard, bumpers, trim</td>
+                <td><span class="rate-pill rate-mid">50 to 70%</span></td>
+                <td>Recycled into lower grade plastic products where technically possible</td>
+              </tr>
+              <tr>
+                <td><strong>Fluids</strong></td>
+                <td>Engine oil, coolant, fuel</td>
+                <td><span class="rate-pill rate-var">Processed</span></td>
+                <td>Processed through specialist contractors, used for energy recovery or treated as hazardous waste. Never landfilled.</td>
+              </tr>
+              <tr>
+                <td><strong>Rubber</strong></td>
+                <td>Tyres, seals, hoses</td>
+                <td><span class="rate-pill rate-mid">Variable</span></td>
+                <td>Crumbed rubber for surfacing, energy recovery in cement kilns</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Plastics remain the greatest challenge. Vehicle interiors contain dozens of different polymer types, many of which are blended or laminated together and difficult to separate economically. Research into improved separation technology and more recyclable vehicle design standards continues to push the recovery rate higher.</p>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 7 -->
+        <h2 id="uk-stats">The UK Picture</h2>
+        <p>The scale of the UK scrap car industry is considerable, and it plays a meaningful role in the country's broader materials economy.</p>
+
+        <div class="stat-row">
+          <div class="stat-chip">
+            <span class="stat-num">1.5M</span>
+            <span class="stat-label">Cars scrapped per year in the UK</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-num">80%+</span>
+            <span class="stat-label">Recycled by weight, required by UK law</span>
+          </div>
+          <div class="stat-chip">
+            <span class="stat-num">85–95%</span>
+            <span class="stat-label">Recovered at modern ATF facilities</span>
+          </div>
+        </div>
+
+        <p>Under UK legislation (inherited from the EU ELV Directive and retained post-Brexit), a minimum of 85% of a vehicle's weight must be recycled or recovered, and at least 80% must be materially recycled rather than simply burned for energy. The UK consistently meets and exceeds these targets, partly because British ATFs have invested significantly in separation technology over the past decade.</p>
+        <p>The UK is consistently ranked among the top performers in Europe for recovering and recycling vehicles at the end of their life. The steel recovered from scrapped UK cars every year is equivalent to roughly 1.5 million tonnes of new steel production, representing a significant saving in both energy and carbon emissions.</p>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 8 -->
+        <h2 id="unlicensed">What If a Car Is Not Scrapped by a Licensed ATF?</h2>
+        <p>This is where things go wrong, and they go wrong in ways that can follow you for years.</p>
+        <p>If your car is taken by an unlicensed yard or individual:</p>
+        <ul>
+          <li><strong>No Certificate of Destruction is issued.</strong> Without a CoD, the DVLA has no record that the vehicle was destroyed. You remain the registered keeper.</li>
+          <li><strong>You could face ongoing DVLA demands.</strong> Road tax demands, MOT reminder letters and, in some cases, fines for an untaxed or un-MOTed vehicle can continue to arrive at your address for years.</li>
+          <li><strong>You could face liability.</strong> If the vehicle is later found to have been used in a crime, involved in an accident, or abandoned somewhere, you may be the first person the authorities contact. Proving you sold or scrapped it becomes your problem.</li>
+          <li><strong>Environmental damage occurs.</strong> Vehicles processed outside licensed facilities typically have their fluids drained carelessly or not at all. This causes direct environmental harm and, in some cases, criminal liability for the yard. The damage is done regardless.</li>
+          <li><strong>Parts are sold without provenance.</strong> Components from unlicensed yards enter the used parts market without any record of origin, contributing to parts fraud and making it harder to trace stolen vehicles.</li>
+        </ul>
+
+        <div class="warning-box">
+          <p><strong>The rule is simple:</strong> always insist on a Certificate of Destruction before your car leaves your sight. If a buyer cannot commit to issuing one, walk away. Any legitimate ATF will issue a CoD as a matter of course. It is their legal obligation.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- SECTION 9 -->
+        <h2 id="check-atf">How to Check Your ATF Is Licensed</h2>
+        <p>Before you hand your car over to any scrap dealer or collection driver, you can verify that they operate from a licensed ATF in under two minutes. Here is how:</p>
+        <ul>
+          <li>Visit the Environment Agency's public register at <a href="https://environment.data.gov.uk/public-register/view/search-waste-operations" rel="nofollow noopener" target="_blank">environment.data.gov.uk</a>.</li>
+          <li>Search by operator name, permit number or location.</li>
+          <li>Licensed ATFs will appear with a valid permit reference and a registered address.</li>
+          <li>If the operator you are dealing with does not appear on the register, do not hand over your vehicle.</li>
+        </ul>
+        <p>Every dealer in the ScrapCarCheck network operates from a licensed, Environment Agency registered ATF. We verify this as part of our vetting process, so when you compare quotes through us, you can be confident the facility receiving your car is operating legally.</p>
+
+        <!-- PULL QUOTE -->
+        <div class="pull-quote">
+          <blockquote>
+            <span class="quote-icon">♻</span>
+            Every car scrapped through ScrapCarCheck goes to a licensed, Environment Agency registered ATF. You get a Certificate of Destruction every time.
+          </blockquote>
+        </div>
+
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="article-sidebar" aria-label="Article navigation">
+        <div class="sidebar-card">
+          <h3>In this guide</h3>
+          <ul class="toc-list">
+            <li><a href="#collection">The day of collection</a></li>
+            <li><a href="#atf">Arrival at the ATF</a></li>
+            <li><a href="#depollution">Depollution</a></li>
+            <li><a href="#parts">Parts salvage</a></li>
+            <li><a href="#shredding">Shredding and separation</a></li>
+            <li><a href="#recycling">What gets recycled</a></li>
+            <li><a href="#uk-stats">The UK picture</a></li>
+            <li><a href="#unlicensed">Risks of unlicensed yards</a></li>
+            <li><a href="#check-atf">How to check your ATF</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-cta">
+          <h3>Ready to scrap your car?</h3>
+          <p>Get instant quotes from licensed ATFs across the UK. Free, no obligation.</p>
+          <a href="/#reg-form" class="btn btn-white btn-sm">Get a Quote</a>
+        </div>
+
+        <div class="sidebar-card" style="margin-top:0">
+          <h3>Related Guides</h3>
+          <ul class="toc-list">
+            <li><a href="/guides/scrap-car-dvla/">Notifying the DVLA when you scrap</a></li>
+            <li><a href="/guides/catalytic-converter-scrap-value/">What is a catalytic converter worth?</a></li>
+            <li><a href="/guides/scrap-car-without-logbook/">Scrapping without a V5C logbook</a></li>
+            <li><a href="/guides/non-runner-scrap-car/">Scrapping a car that does not run</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Scrap Your Car the Right Way</h2>
+    <p>Licensed ATF dealers only. Certificate of Destruction guaranteed. Compare quotes in seconds.</p>
+    <a href="/#reg-form" class="btn btn-white btn-lg">Get My Scrap Quote</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div><span class="logo-icon">♻</span> <strong>ScrapCarCheck.co.uk</strong></div>
+      <p>Free UK scrap car price comparison.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/scrap-car-prices/">Price Guide</a>
+      <a href="/scrap-car-value-calculator/">Value Calculator</a>
+      <a href="/scrap-metal-prices/">Metal Prices</a>
+      <a href="/best-scrap-car-companies/">Top Companies</a>
+      <a href="/scrap-car-faq/">FAQs</a>
+      <a href="/guides/">Guides</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <p class="footer-legal">&#169; 2026 ScrapCarCheck.co.uk.</p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+  function toggleNav(btn) {
+    var nav = document.getElementById('main-nav');
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+</script>
+</body>
+</html>
