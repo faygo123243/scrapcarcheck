@@ -174,31 +174,24 @@ img { max-width: 100%; display: block; }
 }
 
 .reg-plate-icon {
-  background: #1e40af;
+  background: #003399;
   color: white;
-  font-weight: 800;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 8px;
+  padding: 6px 8px;
   border-right: 3px solid #f59e0b;
-  min-width: 36px;
-  gap: 1px;
-}
-
-.gb-stars {
-  font-size: 0.38rem;
-  letter-spacing: -1px;
-  line-height: 1;
-  color: #f59e0b;
+  min-width: 40px;
+  gap: 2px;
 }
 
 .gb-text {
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   font-weight: 900;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   line-height: 1;
+  color: #fff;
 }
 
 .reg-input {
