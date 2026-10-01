@@ -62,6 +62,41 @@
 
   <!-- Guide articles -->
   <url>
+    <loc>https://scrapcarcheck.co.uk/guides/how-to-scrap-a-car/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/how-much-is-my-scrap-car-worth/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-documents/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/does-a-scrap-car-need-mot/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/how-long-does-scrapping-take/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/how-scrap-prices-are-calculated/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-prices-per-tonne-2026/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://scrapcarcheck.co.uk/guides/catalytic-converter-scrap-value/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -130,6 +165,26 @@
   </url>
   <url>
     <loc>https://scrapcarcheck.co.uk/scrap-car-collection-sheffield/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-car-collection-edinburgh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-car-collection-cardiff/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-car-collection-nottingham/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-car-collection-leicester/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
