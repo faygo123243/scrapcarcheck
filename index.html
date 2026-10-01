@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css?v=5">
+  <link rel="stylesheet" href="/css/main.css?v=6">
 </head>
 <body>
 
@@ -168,66 +168,117 @@
   <div class="container">
     <p class="brands-label">We buy all makes and models</p>
     <div class="brands-grid">
-      <div class="brand-logo">
-        <svg viewBox="0 0 80 28" width="80" height="28" aria-label="Ford">
-          <text x="4" y="22" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#334155" letter-spacing="-0.5">Ford</text>
+
+      <!-- Ford: blue oval wordmark -->
+      <div class="brand-logo" aria-label="Ford">
+        <svg viewBox="0 0 90 40" width="90" height="40" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="45" cy="20" rx="44" ry="18" fill="#003478" stroke="#003478" stroke-width="1"/>
+          <text x="45" y="27" text-anchor="middle" font-family="'Ford Antenna','Arial',sans-serif" font-size="18" font-weight="700" font-style="italic" fill="#ffffff" letter-spacing="1">Ford</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 100 28" width="100" height="28" aria-label="Vauxhall">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#334155" letter-spacing="-0.3">Vauxhall</text>
+
+      <!-- Vauxhall: bold italic red wordmark -->
+      <div class="brand-logo" aria-label="Vauxhall">
+        <svg viewBox="0 0 110 36" width="110" height="36" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="27" font-family="'Arial Black','Arial',sans-serif" font-size="18" font-weight="900" font-style="italic" fill="#cc0000" letter-spacing="-0.5">Vauxhall</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 100 28" width="100" height="28" aria-label="Volkswagen">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#334155" letter-spacing="-0.3">Volkswagen</text>
+
+      <!-- VW: circle logo mark + VW text -->
+      <div class="brand-logo" aria-label="Volkswagen">
+        <svg viewBox="0 0 108 36" width="108" height="36" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="16" fill="#001e50"/>
+          <text x="18" y="23" text-anchor="middle" font-family="'Arial',sans-serif" font-size="11" font-weight="900" fill="#ffffff">VW</text>
+          <text x="40" y="26" font-family="'Arial',sans-serif" font-size="15" font-weight="700" fill="#001e50" letter-spacing="-0.3">Volkswagen</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 64 28" width="64" height="28" aria-label="BMW">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#334155" letter-spacing="-0.5">BMW</text>
+
+      <!-- BMW: white/blue badge + BMW text -->
+      <div class="brand-logo" aria-label="BMW">
+        <svg viewBox="0 0 80 36" width="80" height="36" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="16" fill="#ffffff" stroke="#1c69d4" stroke-width="2.5"/>
+          <path d="M18 2 L18 18 L2 18 A16 16 0 0 1 18 2Z" fill="#1c69d4"/>
+          <path d="M18 18 L34 18 A16 16 0 0 1 18 34Z" fill="#1c69d4"/>
+          <circle cx="18" cy="18" r="10" fill="none" stroke="#1c69d4" stroke-width="2"/>
+          <text x="40" y="24" font-family="'Arial Black','Arial',sans-serif" font-size="16" font-weight="900" fill="#1c69d4" letter-spacing="1">BMW</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 84 28" width="84" height="28" aria-label="Toyota">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#334155" letter-spacing="-0.3">Toyota</text>
+
+      <!-- Toyota: red oval rings + Toyota text -->
+      <div class="brand-logo" aria-label="Toyota">
+        <svg viewBox="0 0 100 36" width="100" height="36" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="13" cy="18" rx="12" ry="7" fill="none" stroke="#eb0a1e" stroke-width="2.5"/>
+          <ellipse cx="22" cy="18" rx="12" ry="7" fill="none" stroke="#eb0a1e" stroke-width="2.5"/>
+          <text x="40" y="25" font-family="'Arial',sans-serif" font-size="16" font-weight="700" fill="#eb0a1e" letter-spacing="-0.3">Toyota</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 72 28" width="72" height="28" aria-label="Nissan">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#334155" letter-spacing="-0.3">Nissan</text>
+
+      <!-- Nissan: silver arc wordmark -->
+      <div class="brand-logo" aria-label="Nissan">
+        <svg viewBox="0 0 88 36" width="88" height="36" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="13" width="84" height="10" rx="5" fill="none" stroke="#c0392b" stroke-width="2"/>
+          <text x="44" y="23" text-anchor="middle" font-family="'Arial',sans-serif" font-size="9" font-weight="700" fill="#c0392b" letter-spacing="3">NISSAN</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 74 28" width="74" height="28" aria-label="Renault">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#334155" letter-spacing="-0.3">Renault</text>
+
+      <!-- Renault: yellow diamond + wordmark -->
+      <div class="brand-logo" aria-label="Renault">
+        <svg viewBox="0 0 102 36" width="102" height="36" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="18,4 28,18 18,32 8,18" fill="#f0bf00"/>
+          <polygon points="18,9 24,18 18,27 12,18" fill="#ffffff"/>
+          <text x="36" y="25" font-family="'Arial',sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">Renault</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 64 28" width="64" height="28" aria-label="Audi">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#334155" letter-spacing="-0.5">Audi</text>
+
+      <!-- Audi: four rings -->
+      <div class="brand-logo" aria-label="Audi">
+        <svg viewBox="0 0 90 36" width="90" height="36" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="18" r="11" fill="none" stroke="#333" stroke-width="2.5"/>
+          <circle cx="28" cy="18" r="11" fill="none" stroke="#333" stroke-width="2.5"/>
+          <circle cx="42" cy="18" r="11" fill="none" stroke="#333" stroke-width="2.5"/>
+          <circle cx="56" cy="18" r="11" fill="none" stroke="#333" stroke-width="2.5"/>
+          <text x="73" y="23" font-family="'Arial',sans-serif" font-size="12" font-weight="700" fill="#333" letter-spacing="0.5">Audi</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 112 28" width="112" height="28" aria-label="Mercedes-Benz">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#334155" letter-spacing="-0.3">Mercedes</text>
+
+      <!-- Mercedes: star + wordmark -->
+      <div class="brand-logo" aria-label="Mercedes-Benz">
+        <svg viewBox="0 0 120 36" width="120" height="36" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="16" fill="none" stroke="#333" stroke-width="2"/>
+          <line x1="18" y1="2" x2="18" y2="18" stroke="#333" stroke-width="2"/>
+          <line x1="18" y1="18" x2="4.1" y2="26" stroke="#333" stroke-width="2"/>
+          <line x1="18" y1="18" x2="31.9" y2="26" stroke="#333" stroke-width="2"/>
+          <text x="40" y="24" font-family="'Arial',sans-serif" font-size="13" font-weight="700" fill="#333" letter-spacing="-0.2">Mercedes</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 80 28" width="80" height="28" aria-label="Honda">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#334155" letter-spacing="-0.3">Honda</text>
+
+      <!-- Honda: H logo + wordmark -->
+      <div class="brand-logo" aria-label="Honda">
+        <svg viewBox="0 0 90 36" width="90" height="36" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="6" width="28" height="24" rx="3" fill="#cc0000"/>
+          <text x="16" y="24" text-anchor="middle" font-family="'Arial Black','Arial',sans-serif" font-size="17" font-weight="900" fill="#ffffff">H</text>
+          <text x="38" y="25" font-family="'Arial',sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">Honda</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 80 28" width="80" height="28" aria-label="Peugeot">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#334155" letter-spacing="-0.3">Peugeot</text>
+
+      <!-- Peugeot: lion silhouette + wordmark -->
+      <div class="brand-logo" aria-label="Peugeot">
+        <svg viewBox="0 0 104 36" width="104" height="36" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="4" width="26" height="28" rx="3" fill="#002d62"/>
+          <text x="15" y="24" text-anchor="middle" font-family="'Arial Black','Arial',sans-serif" font-size="14" font-weight="900" fill="#ffffff">🦁</text>
+          <text x="36" y="25" font-family="'Arial',sans-serif" font-size="15" font-weight="700" fill="#002d62" letter-spacing="-0.3">Peugeot</text>
         </svg>
       </div>
-      <div class="brand-logo">
-        <svg viewBox="0 0 74 28" width="74" height="28" aria-label="Citroen">
-          <text x="2" y="22" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#334155" letter-spacing="-0.3">Citroën</text>
+
+      <!-- Citroen: chevrons + wordmark -->
+      <div class="brand-logo" aria-label="Citroën">
+        <svg viewBox="0 0 100 36" width="100" height="36" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="8,10 18,18 8,26" fill="none" stroke="#8b0000" stroke-width="3" stroke-linejoin="round"/>
+          <polyline points="14,10 24,18 14,26" fill="none" stroke="#8b0000" stroke-width="3" stroke-linejoin="round"/>
+          <text x="32" y="25" font-family="'Arial',sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">Citroën</text>
         </svg>
       </div>
+
     </div>
     <p class="brands-more">+ hundreds more makes accepted. <a href="#reg-form">Get your price →</a></p>
   </div>
@@ -263,43 +314,148 @@
     <h2 class="section-title">Scrap Car Collection Across the UK</h2>
     <p class="section-sub">Our network of licensed dealers covers every major city and surrounding area. Free collection included.</p>
     <div class="cities-grid">
+      <!-- London: Big Ben / clock tower -->
       <a href="/scrap-car-collection-london/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="14" y="32" width="12" height="14" rx="1" fill="#16a34a"/>
+            <rect x="12" y="24" width="16" height="10" rx="1" fill="#16a34a"/>
+            <rect x="10" y="18" width="20" height="8" fill="#16a34a"/>
+            <rect x="13" y="6" width="14" height="14" rx="1" fill="#16a34a"/>
+            <polygon points="20,0 27,6 13,6" fill="#15803d"/>
+            <circle cx="20" cy="13" r="4" fill="white" opacity="0.9"/>
+            <line x1="20" y1="13" x2="20" y2="10" stroke="#16a34a" stroke-width="1.2"/>
+            <line x1="20" y1="13" x2="23" y2="13" stroke="#16a34a" stroke-width="1.2"/>
+          </svg>
+        </span>
         <span class="city-name">London</span>
         <span class="city-count">140+ dealers</span>
       </a>
+
+      <!-- Manchester: worker bee / Victorian arch -->
       <a href="/scrap-car-collection-manchester/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="4" y="28" width="32" height="18" rx="1" fill="#16a34a"/>
+            <path d="M4 28 Q20 10 36 28Z" fill="#15803d"/>
+            <rect x="10" y="33" width="6" height="13" rx="1" fill="white" opacity="0.3"/>
+            <rect x="24" y="33" width="6" height="13" rx="1" fill="white" opacity="0.3"/>
+            <rect x="17" y="36" width="6" height="10" rx="1" fill="white" opacity="0.6"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Manchester</span>
         <span class="city-count">60+ dealers</span>
       </a>
+
+      <!-- Birmingham: The Bullring / Selfridges domes -->
       <a href="/scrap-car-collection-birmingham/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="4" y="30" width="32" height="16" rx="2" fill="#16a34a"/>
+            <circle cx="14" cy="30" r="10" fill="#15803d"/>
+            <circle cx="26" cy="30" r="8" fill="#16a34a"/>
+            <circle cx="14" cy="30" r="3" fill="white" opacity="0.25"/>
+            <circle cx="26" cy="30" r="2.5" fill="white" opacity="0.25"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Birmingham</span>
         <span class="city-count">75+ dealers</span>
       </a>
+
+      <!-- Leeds: Town Hall columns -->
       <a href="/scrap-car-collection-leeds/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="30" width="36" height="16" rx="1" fill="#16a34a"/>
+            <rect x="2" y="26" width="36" height="6" rx="1" fill="#15803d"/>
+            <rect x="7" y="16" width="4" height="12" fill="#15803d"/>
+            <rect x="14" y="16" width="4" height="12" fill="#15803d"/>
+            <rect x="22" y="16" width="4" height="12" fill="#15803d"/>
+            <rect x="29" y="16" width="4" height="12" fill="#15803d"/>
+            <rect x="4" y="12" width="32" height="6" rx="1" fill="#15803d"/>
+            <polygon points="20,2 34,12 6,12" fill="#14532d"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Leeds</span>
         <span class="city-count">45+ dealers</span>
       </a>
+
+      <!-- Glasgow: George Square clocktower -->
       <a href="/scrap-car-collection-glasgow/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8" y="32" width="24" height="14" rx="1" fill="#16a34a"/>
+            <rect x="6" y="24" width="28" height="10" rx="1" fill="#15803d"/>
+            <rect x="12" y="10" width="16" height="16" rx="1" fill="#16a34a"/>
+            <rect x="10" y="6" width="20" height="6" rx="1" fill="#15803d"/>
+            <polygon points="20,0 26,6 14,6" fill="#14532d"/>
+            <circle cx="20" cy="18" r="5" fill="white" opacity="0.85"/>
+            <line x1="20" y1="18" x2="20" y2="15" stroke="#16a34a" stroke-width="1.5"/>
+            <line x1="20" y1="18" x2="23" y2="18" stroke="#16a34a" stroke-width="1.2"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Glasgow</span>
         <span class="city-count">50+ dealers</span>
       </a>
+
+      <!-- Bristol: Clifton Suspension Bridge towers -->
       <a href="/scrap-car-collection-bristol/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="4" y="18" width="6" height="28" rx="1" fill="#15803d"/>
+            <rect x="30" y="18" width="6" height="28" rx="1" fill="#15803d"/>
+            <path d="M7 20 Q20 8 33 20" stroke="#16a34a" stroke-width="2" fill="none"/>
+            <line x1="7" y1="20" x2="7" y2="38" stroke="#14532d" stroke-width="1.5"/>
+            <line x1="33" y1="20" x2="33" y2="38" stroke="#14532d" stroke-width="1.5"/>
+            <line x1="12" y1="15" x2="12" y2="34" stroke="#16a34a" stroke-width="1.2"/>
+            <line x1="20" y1="10" x2="20" y2="34" stroke="#16a34a" stroke-width="1.2"/>
+            <line x1="28" y1="15" x2="28" y2="34" stroke="#16a34a" stroke-width="1.2"/>
+            <rect x="2" y="38" width="36" height="6" rx="2" fill="#16a34a"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Bristol</span>
         <span class="city-count">35+ dealers</span>
       </a>
+
+      <!-- Liverpool: Liver Building towers -->
       <a href="/scrap-car-collection-liverpool/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="26" width="34" height="20" rx="1" fill="#16a34a"/>
+            <rect x="6" y="14" width="12" height="14" rx="1" fill="#15803d"/>
+            <rect x="22" y="18" width="12" height="10" rx="1" fill="#15803d"/>
+            <rect x="8" y="6" width="8" height="10" rx="1" fill="#16a34a"/>
+            <polygon points="12,1 16,6 8,6" fill="#14532d"/>
+            <rect x="24" y="10" width="8" height="10" rx="1" fill="#16a34a"/>
+            <polygon points="28,5 32,10 24,10" fill="#14532d"/>
+            <circle cx="12" cy="9" r="1.5" fill="white" opacity="0.7"/>
+            <circle cx="28" cy="13" r="1.5" fill="white" opacity="0.7"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Liverpool</span>
         <span class="city-count">40+ dealers</span>
       </a>
+
+      <!-- Sheffield: steel works / industrial chimney -->
       <a href="/scrap-car-collection-sheffield/" class="city-card">
-        <span class="city-icon">🏙️</span>
+        <span class="city-icon">
+          <svg viewBox="0 0 40 48" width="36" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="28" width="28" height="18" rx="1" fill="#16a34a"/>
+            <rect x="10" y="16" width="8" height="14" rx="1" fill="#15803d"/>
+            <rect x="22" y="20" width="6" height="10" rx="1" fill="#15803d"/>
+            <rect x="8" y="8" width="6" height="10" rx="1" fill="#16a34a"/>
+            <rect x="26" y="12" width="4" height="10" rx="1" fill="#16a34a"/>
+            <path d="M8 8 Q11 4 14 8" stroke="#15803d" stroke-width="1.5" fill="none"/>
+            <path d="M26 12 Q28 8 30 12" stroke="#15803d" stroke-width="1.5" fill="none"/>
+            <rect x="2" y="44" width="36" height="4" rx="1" fill="#14532d"/>
+          </svg>
+        </span>
         <span class="city-name">Sheffield</span>
         <span class="city-count">30+ dealers</span>
       </a>

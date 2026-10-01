@@ -723,7 +723,7 @@ img { max-width: 100%; display: block; }
   transform: translateY(-2px);
   text-decoration: none;
 }
-.city-icon { font-size: 1.5rem; }
+.city-icon { display: flex; align-items: center; justify-content: center; height: 48px; }
 .city-name {
   font-size: 0.95rem;
   font-weight: 700;
