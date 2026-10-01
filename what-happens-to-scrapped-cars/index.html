@@ -441,6 +441,36 @@
       .main-nav.open { display: flex; }
       .main-nav a { padding: 10px 8px; }
     }
+
+    /* Infographic */
+    .infographic-wrap {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px 16px 16px;
+      margin: 28px 0 36px;
+      overflow-x: auto;
+    }
+    .infographic-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .infographic-sub {
+      font-size: .82rem;
+      color: #64748b;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .infographic-credit {
+      font-size: .78rem;
+      color: #94a3b8;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .infographic-credit a { color: #15803d; }
   </style>
 
       <script type="application/ld+json">
@@ -512,6 +542,146 @@
         </div>
 
         <p>Most people hand over their keys, watch the vehicle get loaded onto a flatbed, and assume that is the end of the story. In reality, a scrapped car goes through a carefully regulated process with several distinct stages before any part of it becomes something new. The UK has some of the strictest rules in the world governing end of life vehicles, and understanding how it all works helps you make sure your car is handled correctly and that you get every protection the law entitles you to.</p>
+
+        <!-- PROCESS INFOGRAPHIC -->
+        <div class="infographic-wrap" id="infographic">
+          <p class="infographic-title">The Life of a Scrapped Car — from Collection to Raw Material</p>
+          <p class="infographic-sub">UK licensed ATF process under the End of Life Vehicles Regulations 2003</p>
+          <svg viewBox="0 0 700 520" role="img" aria-label="Infographic: 8 stages a scrapped car passes through at a UK Authorised Treatment Facility" style="width:100%;max-width:700px;display:block;margin:0 auto">
+            <!-- Background -->
+            <rect width="700" height="520" fill="#f8fafc" rx="14"/>
+
+            <!-- Step 1: Collection -->
+            <rect x="20" y="20" width="148" height="110" rx="10" fill="#15803d"/>
+            <text x="94" y="48" text-anchor="middle" font-size="26" fill="white">🚛</text>
+            <text x="94" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="white">1. COLLECTION</text>
+            <text x="94" y="87" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">ID check at your door</text>
+            <text x="94" y="101" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">V5C taken by driver</text>
+            <text x="94" y="115" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">Car loaded on flatbed</text>
+
+            <!-- Arrow 1→2 -->
+            <line x1="168" y1="75" x2="192" y2="75" stroke="#15803d" stroke-width="2.5" marker-end="url(#arr)"/>
+
+            <!-- Step 2: ATF Arrival -->
+            <rect x="192" y="20" width="148" height="110" rx="10" fill="#16a34a"/>
+            <text x="266" y="48" text-anchor="middle" font-size="26" fill="white">🏭</text>
+            <text x="266" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="white">2. ATF ARRIVAL</text>
+            <text x="266" y="87" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">VIN logged and checked</text>
+            <text x="266" y="101" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">DVLA notified</text>
+            <text x="266" y="115" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">Liability ends for you</text>
+
+            <!-- Arrow 2→3 -->
+            <line x1="340" y1="75" x2="364" y2="75" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+            <!-- Step 3: Depollution -->
+            <rect x="364" y="20" width="148" height="110" rx="10" fill="#0f4c2a"/>
+            <text x="438" y="48" text-anchor="middle" font-size="26" fill="white">🧪</text>
+            <text x="438" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="white">3. DEPOLLUTION</text>
+            <text x="438" y="87" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">All fluids extracted</text>
+            <text x="438" y="101" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">Airbags deactivated</text>
+            <text x="438" y="115" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.85)">Legal requirement</text>
+
+            <!-- Arrow 3→4 (down on right) -->
+            <line x1="438" y1="130" x2="438" y2="154" stroke="#0f4c2a" stroke-width="2.5" marker-end="url(#arr3)"/>
+
+            <!-- Step 4: CoD Issued -->
+            <rect x="534" y="20" width="148" height="110" rx="10" fill="#f59e0b"/>
+            <text x="608" y="48" text-anchor="middle" font-size="26" fill="white">📋</text>
+            <text x="608" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="white">CoD ISSUED</text>
+            <text x="608" y="87" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Cert of Destruction</text>
+            <text x="608" y="101" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Sent within 7 days</text>
+            <text x="608" y="115" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Keep it permanently</text>
+
+            <!-- Down arrow from step 3 side to row 2 -->
+            <line x1="340" y1="200" x2="320" y2="200" stroke="#b45309" stroke-width="2.5" marker-end="url(#arr4)"/>
+            <line x1="192" y1="200" x2="168" y2="200" stroke="#0f172a" stroke-width="2.5" marker-end="url(#arr5)"/>
+            <line x1="364" y1="200" x2="344" y2="200" stroke="#0f172a" stroke-width="2" marker-end="url(#arr5b)"/>
+
+            <!-- Step 5: Parts Salvage -->
+            <rect x="192" y="154" width="148" height="110" rx="10" fill="#0ea5e9"/>
+            <text x="266" y="182" text-anchor="middle" font-size="26" fill="white">🔧</text>
+            <text x="266" y="204" text-anchor="middle" font-size="12" font-weight="700" fill="white">4. PARTS SALVAGE</text>
+            <text x="266" y="221" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Engine, wheels, lights</text>
+            <text x="266" y="235" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Sold to repairers</text>
+            <text x="266" y="249" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Extends parts lifespan</text>
+
+            <!-- Step 6: Crushing -->
+            <rect x="364" y="154" width="148" height="110" rx="10" fill="#64748b"/>
+            <text x="438" y="182" text-anchor="middle" font-size="26" fill="white">🏗️</text>
+            <text x="438" y="204" text-anchor="middle" font-size="12" font-weight="700" fill="white">5. CRUSHING</text>
+            <text x="438" y="221" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Shell flattened by press</text>
+            <text x="438" y="235" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Volume reduced 90%</text>
+            <text x="438" y="249" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Baled for transport</text>
+
+            <!-- Row 2 left filler: Step 5 left -->
+            <rect x="20" y="154" width="148" height="110" rx="10" fill="#4ade80" fill-opacity=".18" stroke="#16a34a" stroke-width="1.5"/>
+            <text x="94" y="182" text-anchor="middle" font-size="26">♻️</text>
+            <text x="94" y="204" text-anchor="middle" font-size="12" font-weight="700" fill="#0f4c2a">ELV REUSE GOAL</text>
+            <text x="94" y="221" text-anchor="middle" font-size="10" fill="#15803d">95% of each car must</text>
+            <text x="94" y="235" text-anchor="middle" font-size="10" fill="#15803d">be reused or recycled</text>
+            <text x="94" y="249" text-anchor="middle" font-size="10" fill="#15803d">(ELV Regs 2003)</text>
+
+            <!-- Arrow from parts to row below -->
+            <line x1="266" y1="264" x2="266" y2="290" stroke="#0ea5e9" stroke-width="2.5" marker-end="url(#arr6)"/>
+
+            <!-- Arrow from crushing to row below -->
+            <line x1="438" y1="264" x2="438" y2="290" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr7)"/>
+
+            <!-- Step 7: Shredding -->
+            <rect x="192" y="290" width="148" height="110" rx="10" fill="#7c3aed"/>
+            <text x="266" y="318" text-anchor="middle" font-size="26" fill="white">⚡</text>
+            <text x="266" y="340" text-anchor="middle" font-size="12" font-weight="700" fill="white">6. SHREDDING</text>
+            <text x="266" y="357" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Hammer mill shreds body</text>
+            <text x="266" y="371" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Into fist-sized pieces</text>
+            <text x="266" y="385" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Magnets pull steel out</text>
+
+            <!-- Step 8: Sorting -->
+            <rect x="364" y="290" width="148" height="110" rx="10" fill="#dc2626"/>
+            <text x="438" y="318" text-anchor="middle" font-size="26" fill="white">🧲</text>
+            <text x="438" y="340" text-anchor="middle" font-size="12" font-weight="700" fill="white">7. SORTING</text>
+            <text x="438" y="357" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Eddy current separators</text>
+            <text x="438" y="371" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Recover non-ferrous</text>
+            <text x="438" y="385" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Aluminium, copper, zinc</text>
+
+            <!-- Row 3 right: Outcome -->
+            <rect x="534" y="290" width="148" height="110" rx="10" fill="#15803d"/>
+            <text x="608" y="318" text-anchor="middle" font-size="26" fill="white">🏗️</text>
+            <text x="608" y="340" text-anchor="middle" font-size="12" font-weight="700" fill="white">8. REMELTING</text>
+            <text x="608" y="357" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Sent to steel mill</text>
+            <text x="608" y="371" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Becomes new steel</text>
+            <text x="608" y="385" text-anchor="middle" font-size="10" fill="rgba(255,255,255,.9)">Car lives again</text>
+
+            <!-- Connector arrows row 3 -->
+            <line x1="340" y1="345" x2="364" y2="345" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arr8)"/>
+            <line x1="512" y1="345" x2="534" y2="345" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr9)"/>
+
+            <!-- Stats bar at bottom -->
+            <rect x="20" y="420" width="660" height="86" rx="10" fill="#0f172a"/>
+            <text x="350" y="443" text-anchor="middle" font-size="12" font-weight="700" fill="white">By the numbers — a typical UK scrapped car</text>
+            <text x="140" y="468" text-anchor="middle" font-size="22" font-weight="800" fill="#4ade80">95%</text>
+            <text x="140" y="484" text-anchor="middle" font-size="10" fill="#94a3b8">recovered by weight</text>
+            <text x="350" y="468" text-anchor="middle" font-size="22" font-weight="800" fill="#f59e0b">~180kg</text>
+            <text x="350" y="484" text-anchor="middle" font-size="10" fill="#94a3b8">aluminium per car</text>
+            <text x="560" y="468" text-anchor="middle" font-size="22" font-weight="800" fill="#60a5fa">7 days</text>
+            <text x="560" y="484" text-anchor="middle" font-size="10" fill="#94a3b8">to receive your CoD</text>
+            <text x="350" y="502" text-anchor="middle" font-size="9" fill="#475569">Source: SMMT / End of Life Vehicles Regulations 2003 / ScrapCarCheck.co.uk</text>
+
+            <!-- Arrow markers -->
+            <defs>
+              <marker id="arr"  markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#15803d"/></marker>
+              <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#16a34a"/></marker>
+              <marker id="arr3" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto"><path d="M0,0 L6,0 L3,7 z" fill="#0f4c2a"/></marker>
+              <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#b45309"/></marker>
+              <marker id="arr5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#0f172a"/></marker>
+              <marker id="arr5b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#0f172a"/></marker>
+              <marker id="arr6" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto"><path d="M0,0 L6,0 L3,7 z" fill="#0ea5e9"/></marker>
+              <marker id="arr7" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto"><path d="M0,0 L6,0 L3,7 z" fill="#64748b"/></marker>
+              <marker id="arr8" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#7c3aed"/></marker>
+              <marker id="arr9" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#dc2626"/></marker>
+            </defs>
+          </svg>
+          <p class="infographic-credit">Share this infographic: <a href="https://scrapcarcheck.co.uk/what-happens-to-scrapped-cars/" rel="noopener">scrapcarcheck.co.uk/what-happens-to-scrapped-cars/</a></p>
+        </div>
 
         <!-- SECTION 1 -->
         <h2 id="collection">The Day of Collection</h2>

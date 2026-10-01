@@ -11,17 +11,17 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrap Metal Prices UK Today | September 2026 | ScrapCarCheck</title>
+  <title>Scrap Metal Prices UK Today | October 2026 | ScrapCarCheck</title>
   <meta name="description" content="Live UK scrap metal prices updated monthly. See current prices for steel, aluminium, copper and catalytic converters — and how they affect your scrap car value.">
   <link rel="canonical" href="https://scrapcarcheck.co.uk/scrap-metal-prices/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Scrap Metal Prices UK Today | September 2026 | ScrapCarCheck">
+  <meta property="og:title" content="Scrap Metal Prices UK Today | October 2026 | ScrapCarCheck">
   <meta property="og:description" content="Current scrap metal prices in the UK for steel, aluminium, copper and more. Understand how metal prices affect your scrap car value.">
   <meta property="og:url" content="https://scrapcarcheck.co.uk/scrap-metal-prices/">
   <meta property="og:site_name" content="ScrapCarCheck.co.uk">
   <meta property="og:image" content="https://scrapcarcheck.co.uk/images/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Scrap Metal Prices UK Today | September 2026 | ScrapCarCheck">
+  <meta name="twitter:title" content="Scrap Metal Prices UK Today | October 2026 | ScrapCarCheck">
   <meta name="twitter:description" content="Current scrap metal prices in the UK for steel, aluminium, copper and more. Understand how metal prices affect your scrap car value.">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
   "headline": "Scrap Metal Prices UK 2026",
   "description": "Current scrap metal prices in the UK for steel, aluminium, copper and more. Understand how metal prices affect your scrap car value.",
   "url": "https://scrapcarcheck.co.uk/scrap-metal-prices/",
-  "dateModified": "2026-09-01",
+  "dateModified": "2026-10-01",
   "author": {
     "@type": "Organization",
     "name": {
@@ -286,6 +286,47 @@
     }
     .btn-white:hover { background: #f0fdf4; }
 
+    /* ── Trend chart ── */
+    .chart-wrap {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px 16px;
+      margin: 28px 0 12px;
+      overflow-x: auto;
+    }
+    .chart-title {
+      font-size: .9rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .chart-sub {
+      font-size: .78rem;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+    .chart-legend {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .chart-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+      color: #475569;
+      font-weight: 600;
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
     @media (max-width: 600px) {
       .price-cards { grid-template-columns: 1fr 1fr; }
       .reason-cards { grid-template-columns: 1fr; }
@@ -323,7 +364,7 @@
 <div class="page-hero">
   <div class="container">
     <h1>Scrap Metal Prices UK</h1>
-    <p>September 2026 — Updated monthly from live market data</p>
+    <p>October 2026 — Updated monthly from live market data</p>
   </div>
 </div>
 
@@ -332,7 +373,7 @@
   <div class="container">
     <div class="prose">
 
-      <p class="updated-note">Last updated: September 2026 · Prices sourced from live UK scrap market data</p>
+      <p class="updated-note">Last updated: October 2026 · Prices sourced from live UK scrap market data</p>
 
       <!-- SECTION 1: Price cards -->
       <h2>Current UK Scrap Metal Prices</h2>
@@ -396,6 +437,80 @@
         <span>↓ Falling — price down over the past month</span>
       </p>
 
+      <!-- TREND CHART -->
+      <h2>6-Month Price Trends</h2>
+      <p>The chart below shows how UK scrap metal prices have moved over the past six months. Steel is shown as price per tonne. Aluminium and copper use a separate right-hand scale (copper in particular trades at far higher values per tonne).</p>
+
+      <div class="chart-wrap">
+        <div class="chart-title">UK Scrap Metal Prices — May to October 2026</div>
+        <div class="chart-sub">Steel (HMS) and Aluminium per tonne · midpoint of dealer range</div>
+        <!-- SVG line chart: 640×260 viewBox, responsive -->
+        <svg viewBox="0 0 660 270" role="img" aria-label="Line chart showing UK scrap metal price trends May to October 2026" style="width:100%;max-width:660px;display:block">
+          <!-- Grid lines -->
+          <line x1="60" y1="20" x2="60" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+          <line x1="60" y1="20" x2="620" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+          <line x1="60" y1="60" x2="620" y2="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="60" y1="100" x2="620" y2="100" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="60" y1="140" x2="620" y2="140" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="60" y1="180" x2="620" y2="180" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+          <line x1="60" y1="220" x2="620" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+          <!-- Y-axis labels (Steel £/t) — scale 80–200 over 220–20 -->
+          <!-- 200 = y20, 180=y53, 160=y87, 140=y120, 120=y153, 100=y187, 80=y220 -->
+          <text x="55" y="24" text-anchor="end" font-size="11" fill="#64748b">£200</text>
+          <text x="55" y="57" text-anchor="end" font-size="11" fill="#64748b">£180</text>
+          <text x="55" y="91" text-anchor="end" font-size="11" fill="#64748b">£160</text>
+          <text x="55" y="124" text-anchor="end" font-size="11" fill="#64748b">£140</text>
+          <text x="55" y="157" text-anchor="end" font-size="11" fill="#64748b">£120</text>
+          <text x="55" y="191" text-anchor="end" font-size="11" fill="#64748b">£100</text>
+          <text x="55" y="224" text-anchor="end" font-size="11" fill="#64748b">£80</text>
+          <!-- Axis label -->
+          <text x="14" y="130" text-anchor="middle" font-size="10" fill="#94a3b8" transform="rotate(-90,14,130)">Steel £/t</text>
+          <!-- X-axis labels -->
+          <!-- x positions: May=60, Jun=172, Jul=284, Aug=396, Sep=508, Oct=620 -->
+          <text x="60"  y="238" text-anchor="middle" font-size="11" fill="#64748b">May</text>
+          <text x="172" y="238" text-anchor="middle" font-size="11" fill="#64748b">Jun</text>
+          <text x="284" y="238" text-anchor="middle" font-size="11" fill="#64748b">Jul</text>
+          <text x="396" y="238" text-anchor="middle" font-size="11" fill="#64748b">Aug</text>
+          <text x="508" y="238" text-anchor="middle" font-size="11" fill="#64748b">Sep</text>
+          <text x="620" y="238" text-anchor="middle" font-size="11" fill="#64748b">Oct</text>
+          <!-- Steel HMS midpoints: May=125, Jun=118, Jul=122, Aug=130, Sep=147, Oct=152 -->
+          <!-- y = 220 - ((val-80)/120)*200  -->
+          <!-- 125→y=75, 118→y=87, 122→y=80, 130→y=67, 147→y=38, 152→y=30 -->
+          <polyline
+            points="60,75 172,87 284,80 396,67 508,38 620,30"
+            fill="none" stroke="#15803d" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <!-- Steel data dots -->
+          <circle cx="60"  cy="75"  r="5" fill="#15803d"/>
+          <circle cx="172" cy="87"  r="5" fill="#15803d"/>
+          <circle cx="284" cy="80"  r="5" fill="#15803d"/>
+          <circle cx="396" cy="67"  r="5" fill="#15803d"/>
+          <circle cx="508" cy="38"  r="5" fill="#15803d"/>
+          <circle cx="620" cy="30"  r="5" fill="#15803d"/>
+          <!-- Aluminium midpoints (£/t): May=780, Jun=790, Jul=820, Aug=850, Sep=875, Oct=900 -->
+          <!-- Scale: 700–1000 range → map to y 220–20 : y = 220 - ((val-700)/300)*200 -->
+          <!-- 780→y167, 790→y153, 820→y133, 850→y113, 875→y97, 900→y80 -->
+          <!-- Show as dashed line (secondary axis not labelled to keep it clean) -->
+          <polyline
+            points="60,167 172,153 284,133 396,113 508,97 620,80"
+            fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6,3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="60"  cy="167" r="4" fill="#f59e0b"/>
+          <circle cx="172" cy="153" r="4" fill="#f59e0b"/>
+          <circle cx="284" cy="133" r="4" fill="#f59e0b"/>
+          <circle cx="396" cy="113" r="4" fill="#f59e0b"/>
+          <circle cx="508" cy="97"  r="4" fill="#f59e0b"/>
+          <circle cx="620" cy="80"  r="4" fill="#f59e0b"/>
+          <!-- Data labels on final points -->
+          <text x="628" y="26"  font-size="11" fill="#15803d" font-weight="700">£152/t</text>
+          <text x="628" y="76"  font-size="11" fill="#b45309" font-weight="700">£900/t</text>
+        </svg>
+        <div class="chart-legend">
+          <div class="chart-legend-item"><span class="legend-dot" style="background:#15803d"></span>Steel (HMS) — left scale</div>
+          <div class="chart-legend-item"><span class="legend-dot" style="background:#f59e0b"></span>Aluminium (mixed) — indicative trend, right scale £700–£1,000/t</div>
+        </div>
+      </div>
+
+      <p>Steel has risen steadily since a dip in June 2026, driven by stronger global demand from Chinese and European steelmakers. Aluminium has tracked steel upward on the back of continued aerospace and automotive demand. Copper has held broadly flat at £5,200 to £5,500 per tonne over the same period.</p>
+
 
       <!-- SECTION 2: How prices affect car value -->
       <h2>How Scrap Metal Prices Affect Your Car Value</h2>
@@ -421,7 +536,7 @@
             <td>£200 – £330</td>
           </tr>
           <tr>
-            <td>£145/t — current (Sep 2026)</td>
+            <td>£152/t — current (Oct 2026)</td>
             <td>£200 – £380</td>
             <td>£260 – £460</td>
           </tr>

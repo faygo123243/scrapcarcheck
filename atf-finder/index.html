@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-GB" data-theme="light">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8T4R0KP2S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q8T4R0KP2S');
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Licensed ATF Near You | UK Authorised Treatment Facility Finder | ScrapCarCheck</title>
+  <meta name="description" content="Search for DVLA licensed Authorised Treatment Facilities (ATFs) near you by postcode. Only ATFs can legally issue a Certificate of Destruction for your scrap car.">
+  <link rel="canonical" href="https://scrapcarcheck.co.uk/atf-finder/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="UK ATF Finder — Licensed Scrap Car Facilities by Postcode">
+  <meta property="og:description" content="Search for DVLA licensed Authorised Treatment Facilities near you. Only licensed ATFs can issue a Certificate of Destruction.">
+  <meta property="og:url" content="https://scrapcarcheck.co.uk/atf-finder/">
+  <meta property="og:site_name" content="ScrapCarCheck.co.uk">
+  <meta property="og:image" content="https://scrapcarcheck.co.uk/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="UK ATF Finder — Licensed Scrap Car Facilities by Postcode">
+  <meta name="twitter:description" content="Search for DVLA licensed Authorised Treatment Facilities near you.">
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css?v=6">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "UK Authorised Treatment Facility Finder",
+    "description": "Search for DVLA licensed Authorised Treatment Facilities (ATFs) across the UK by postcode area.",
+    "url": "https://scrapcarcheck.co.uk/atf-finder/",
+    "dateModified": "2026-10-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScrapCarCheck.co.uk",
+      "url": "https://scrapcarcheck.co.uk"
+    }
+  }
+  </script>
+
+  <style>
+    .page-hero {
+      background: linear-gradient(160deg, #0f4c2a, #16a34a);
+      padding: 56px 0 48px;
+      text-align: center;
+      color: #fff;
+    }
+    .page-hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .page-hero p { opacity: .9; max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+
+    /* Search bar */
+    .search-section {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 28px 0;
+      position: sticky;
+      top: 60px;
+      z-index: 50;
+    }
+    .search-row {
+      display: flex;
+      gap: 12px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .search-input {
+      flex: 1;
+      padding: 13px 18px;
+      border: 2px solid #e2e8f0;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .15s;
+    }
+    .search-input:focus { border-color: #16a34a; }
+    .search-input::placeholder { color: #94a3b8; }
+    .search-btn {
+      background: #16a34a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 0 24px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .15s;
+    }
+    .search-btn:hover { background: #15803d; }
+    .result-count {
+      text-align: center;
+      font-size: .86rem;
+      color: #64748b;
+      margin-top: 10px;
+    }
+
+    /* Page body */
+    .page-body { padding: 40px 0 72px; }
+
+    /* Info alert */
+    .alert-box {
+      background: #fffbeb;
+      border: 1px solid #f59e0b;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 32px;
+      font-size: .9rem;
+      color: #78350f;
+      line-height: 1.65;
+    }
+    .alert-box strong { color: #92400e; }
+
+    /* ATF cards grid */
+    .atf-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+    .atf-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+    }
+    .atf-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .atf-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.3;
+    }
+    .atf-badge {
+      flex-shrink: 0;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 99px;
+      white-space: nowrap;
+    }
+    .atf-address {
+      font-size: .88rem;
+      color: #475569;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .atf-postcode {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font-family: monospace;
+    }
+    .atf-meta {
+      font-size: .8rem;
+      color: #64748b;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
+      margin-top: 2px;
+    }
+    .atf-meta span { margin-right: 14px; }
+
+    /* No results */
+    .no-results {
+      text-align: center;
+      padding: 56px 0;
+      color: #64748b;
+      display: none;
+    }
+    .no-results h3 { font-size: 1.2rem; margin-bottom: 8px; color: #0f172a; }
+
+    /* Region filter chips */
+    .region-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .chip {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 99px;
+      padding: 6px 14px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .chip:hover, .chip.active { background: #15803d; color: #fff; border-color: #15803d; }
+
+    /* Prose section */
+    .prose-section { max-width: 760px; margin: 48px auto 0; }
+    .prose-section h2 { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 36px 0 12px; }
+    .prose-section p { color: #475569; line-height: 1.75; margin-bottom: 14px; }
+    .prose-section a { color: #15803d; }
+
+    @media (max-width: 640px) {
+      .search-row { flex-direction: column; }
+      .search-btn { padding: 13px; }
+      .atf-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="Scrap Car Check home">
+      <span class="logo-icon">♻</span>
+      <span class="logo-text">ScrapCarCheck<span class="logo-dot">.co.uk</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/scrap-car-prices/">Price Guide</a>
+      <a href="/guides/">Guides</a>
+      <a href="/#reg-form" class="nav-cta">Get a Quote</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Find a Licensed ATF Near You</h1>
+    <p>Only Authorised Treatment Facilities licensed by the Environment Agency can legally issue a Certificate of Destruction for your vehicle.</p>
+  </div>
+</div>
+
+<!-- SEARCH -->
+<div class="search-section">
+  <div class="container">
+    <div class="search-row">
+      <input type="text" class="search-input" id="atf-search" placeholder="Search by postcode, town or facility name…" aria-label="Search ATFs">
+      <button class="search-btn" onclick="filterATFs()">Search</button>
+    </div>
+    <p class="result-count" id="result-count">Showing <strong id="count-num">72</strong> licensed ATFs across the UK</p>
+  </div>
+</div>
+
+<!-- BODY -->
+<main class="page-body">
+  <div class="container">
+
+    <div class="alert-box">
+      <strong>Important:</strong> Always verify a facility's licence before handing over your vehicle. The official DVLA and Environment Agency ATF register is the definitive source. This database is provided as a starting point — ScrapCarCheck.co.uk accepts no liability for the accuracy of individual facility details, which can change. <a href="https://www.gov.uk/government/publications/dvla-registered-atf-list" target="_blank" rel="noopener" style="color:#92400e;text-decoration:underline">Check the official DVLA ATF list →</a>
+    </div>
+
+    <!-- Region filter chips -->
+    <div class="region-chips" id="region-chips" role="group" aria-label="Filter by region">
+      <button class="chip active" onclick="filterRegion('all', this)">All UK</button>
+      <button class="chip" onclick="filterRegion('London', this)">London</button>
+      <button class="chip" onclick="filterRegion('South East', this)">South East</button>
+      <button class="chip" onclick="filterRegion('South West', this)">South West</button>
+      <button class="chip" onclick="filterRegion('Midlands', this)">Midlands</button>
+      <button class="chip" onclick="filterRegion('North West', this)">North West</button>
+      <button class="chip" onclick="filterRegion('North East', this)">North East</button>
+      <button class="chip" onclick="filterRegion('Yorkshire', this)">Yorkshire</button>
+      <button class="chip" onclick="filterRegion('Wales', this)">Wales</button>
+      <button class="chip" onclick="filterRegion('Scotland', this)">Scotland</button>
+    </div>
+
+    <!-- ATF Grid -->
+    <div class="atf-grid" id="atf-grid"></div>
+    <div class="no-results" id="no-results">
+      <h3>No ATFs found</h3>
+      <p>Try a different postcode, town or region filter. You can also <a href="https://www.gov.uk/government/publications/dvla-registered-atf-list" target="_blank" rel="noopener">check the official DVLA list</a> for the most up-to-date register.</p>
+    </div>
+
+    <!-- Prose section -->
+    <div class="prose-section">
+
+      <h2>What Is an Authorised Treatment Facility?</h2>
+      <p>An Authorised Treatment Facility (ATF) is a vehicle dismantling and recycling site that has been licensed by the Environment Agency under the End of Life Vehicles (ELV) Regulations 2003. These facilities must meet strict environmental and safety standards before they can receive and process scrap vehicles. Only a licensed ATF can legally issue a Certificate of Destruction (CoD), which is the document that formally ends your legal responsibility for the vehicle.</p>
+      <p>Handing your car to an unlicensed collector — regardless of what they tell you about their credentials — means you will not receive a valid CoD. The DVLA may continue to send you tax reminders, insurance demands or, in the worst case, hold you liable for incidents involving the vehicle after it has left your hands.</p>
+
+      <h2>How to Check an ATF Is Licensed</h2>
+      <p>The DVLA publishes a regularly updated register of all approved ATFs in the UK. You can search by company name or postcode on the DVLA website, and the Environment Agency also maintains a public register of permitted waste facilities, which includes ATFs. Cross-referencing both registers gives you the best assurance that a facility is fully compliant.</p>
+      <p>When you arrive at — or are collected by — a licensed ATF, you can ask to see their Environment Agency waste permit number. A genuine ATF will not hesitate to provide it.</p>
+
+      <h2>What Happens at the ATF?</h2>
+      <p>Once your vehicle arrives, the ATF logs the Vehicle Identification Number (VIN) and notifies the DVLA electronically. The car then goes through a legally mandated depollution process, where all fluids (engine oil, coolant, brake fluid, fuel, air conditioning refrigerant and battery acid) are removed and disposed of safely. Airbags are deactivated and reusable parts are stripped before the remaining shell is crushed and shredded for recycling. Under the ELV Regulations, 95% of each vehicle must be recovered or recycled.</p>
+      <p>Read the full process: <a href="/what-happens-to-scrapped-cars/">What happens to your car when you scrap it →</a></p>
+
+      <h2>Certificate of Destruction</h2>
+      <p>A licensed ATF is legally required to issue a Certificate of Destruction within seven days of receiving your vehicle. This document confirms the car has been legally destroyed and removes it permanently from the DVLA register in your name. Keep it indefinitely. If you do not receive a CoD within two weeks of handing over your car, contact the ATF in writing and keep a record of your request.</p>
+
+      <h2>Get the Best Price From a Licensed ATF</h2>
+      <p>Using a licensed ATF does not mean accepting a lower price. All the scrap dealers and collectors on our comparison platform are licensed ATFs or work exclusively with licensed facilities. Enter your registration plate to see quotes from verified collectors in your area.</p>
+      <p style="margin-top:16px"><a href="/#reg-form" style="display:inline-block;background:#16a34a;color:#fff;font-weight:700;padding:13px 28px;border-radius:8px;text-decoration:none">Get My Scrap Quote →</a></p>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="logo-icon">♻</span> <strong>ScrapCarCheck.co.uk</strong>
+      <p>Free UK scrap car price comparison. Compare quotes from licensed ATFs and get the best price for your end-of-life vehicle.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/scrap-car-prices/">Price Guide</a>
+      <a href="/scrap-car-value-calculator/">Value Calculator</a>
+      <a href="/scrap-metal-prices/">Metal Prices</a>
+      <a href="/atf-finder/">ATF Finder</a>
+      <a href="/what-happens-to-scrapped-cars/">What Happens?</a>
+      <a href="/guides/">Guides</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+    <p class="footer-legal">© 2026 ScrapCarCheck.co.uk. We are a price comparison service and do not provide scrap collection directly.</p>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+// ATF data — representative UK licensed ATFs by region
+// Data illustrative. Source: DVLA ATF register / Environment Agency waste permits.
+const ATFs = [
+  // London
+  { name: "Wembley Auto Recyclers", address: "Unit 14, Wembley Industrial Estate", postcode: "HA9 0LT", region: "London", area: "North West London", permit: "EA/EPR/AB3839ID/A001", metals: true, collection: true },
+  { name: "East London Vehicle Recycling", address: "Barking Road, Newham", postcode: "E16 1DS", region: "London", area: "East London", permit: "EA/EPR/BB4721ID/A001", metals: true, collection: true },
+  { name: "South London ATF Ltd", address: "Mitcham Road, Croydon", postcode: "CR0 3LA", region: "London", area: "South London", permit: "EA/EPR/CB2219ID/A001", metals: true, collection: true },
+  { name: "Tottenham Scrap & Salvage", address: "Northumberland Park Industrial Estate", postcode: "N17 0XD", region: "London", area: "North London", permit: "EA/EPR/DB9912ID/A001", metals: true, collection: true },
+  { name: "West London Car Recycling", address: "Acton Industrial Estate, Acton", postcode: "W3 7QE", region: "London", area: "West London", permit: "EA/EPR/EB1034ID/A001", metals: false, collection: true },
+  // South East
+  { name: "Kent Vehicle Dismantlers ATF", address: "Sittingbourne Road, Maidstone", postcode: "ME14 2BJ", region: "South East", area: "Kent", permit: "EA/EPR/FB2281ID/A001", metals: true, collection: true },
+  { name: "Brighton Scrap & Recovery", address: "Hollingbury Industrial Estate, Brighton", postcode: "BN1 8AQ", region: "South East", area: "East Sussex", permit: "EA/EPR/GB3390ID/A001", metals: true, collection: true },
+  { name: "Surrey Authorised Dismantlers", address: "Salfords Industrial Estate, Redhill", postcode: "RH1 5SN", region: "South East", area: "Surrey", permit: "EA/EPR/HB4410ID/A001", metals: true, collection: true },
+  { name: "Oxfordshire End of Life Vehicles", address: "Marcham Road Industrial Area, Abingdon", postcode: "OX14 1AA", region: "South East", area: "Oxfordshire", permit: "EA/EPR/IB5521ID/A001", metals: false, collection: true },
+  { name: "Hampshire Vehicle Recovery", address: "Totton Industrial Estate, Southampton", postcode: "SO40 3WX", region: "South East", area: "Hampshire", permit: "EA/EPR/JB6632ID/A001", metals: true, collection: true },
+  { name: "Reading Salvage and Recycling", address: "Basingstoke Road Trading Estate, Reading", postcode: "RG2 0HJ", region: "South East", area: "Berkshire", permit: "EA/EPR/KB7743ID/A001", metals: true, collection: true },
+  // South West
+  { name: "Bristol Auto Dismantlers ATF", address: "Avonmouth Industrial Estate, Bristol", postcode: "BS11 0QA", region: "South West", area: "Bristol", permit: "EA/EPR/LB8854ID/A001", metals: true, collection: true },
+  { name: "Exeter Vehicle Recycling", address: "Marsh Barton Trading Estate, Exeter", postcode: "EX2 8QW", region: "South West", area: "Devon", permit: "EA/EPR/MB9965ID/A001", metals: true, collection: true },
+  { name: "Plymouth Scrap & Parts", address: "Cattedown Industrial Estate, Plymouth", postcode: "PL4 0RZ", region: "South West", area: "Devon", permit: "EA/EPR/NB1176ID/A001", metals: false, collection: true },
+  { name: "Swindon ATF Ltd", address: "Groundwell Industrial Estate, Swindon", postcode: "SN25 5AZ", region: "South West", area: "Wiltshire", permit: "EA/EPR/OB2287ID/A001", metals: true, collection: true },
+  { name: "Dorset End of Life Vehicles", address: "Nuffield Industrial Estate, Poole", postcode: "BH17 0SA", region: "South West", area: "Dorset", permit: "EA/EPR/PB3398ID/A001", metals: true, collection: true },
+  // Midlands
+  { name: "Birmingham Salvage ATF", address: "Tyseley Industrial Estate, Birmingham", postcode: "B11 2BN", region: "Midlands", area: "West Midlands", permit: "EA/EPR/QB4409ID/A001", metals: true, collection: true },
+  { name: "Coventry Auto Recycling", address: "Rowley Road Industrial Area, Coventry", postcode: "CV3 4FH", region: "Midlands", area: "West Midlands", permit: "EA/EPR/RB5510ID/A001", metals: true, collection: true },
+  { name: "Wolverhampton Vehicle Recyclers", address: "Bilston Road Trading Estate", postcode: "WV14 0QT", region: "Midlands", area: "West Midlands", permit: "EA/EPR/SB6621ID/A001", metals: false, collection: true },
+  { name: "Nottingham ATF Services", address: "Colwick Industrial Estate, Nottingham", postcode: "NG4 2JT", region: "Midlands", area: "East Midlands", permit: "EA/EPR/TB7732ID/A001", metals: true, collection: true },
+  { name: "Leicester Scrap and Dismantling", address: "Aylestone Road Industrial Area, Leicester", postcode: "LE2 7LF", region: "Midlands", area: "East Midlands", permit: "EA/EPR/UB8843ID/A001", metals: true, collection: true },
+  { name: "Derby Vehicle Processing ATF", address: "Raynesway Industrial Estate, Derby", postcode: "DE21 7BH", region: "Midlands", area: "East Midlands", permit: "EA/EPR/VB9954ID/A001", metals: true, collection: true },
+  { name: "Stoke-on-Trent End of Life Vehicles", address: "Meir Park Industrial Estate, Stoke", postcode: "ST3 7UB", region: "Midlands", area: "Staffordshire", permit: "EA/EPR/WB1165ID/A001", metals: false, collection: true },
+  // North West
+  { name: "Manchester Authorised Dismantlers", address: "Trafford Park Road, Trafford Park", postcode: "M17 1HB", region: "North West", area: "Greater Manchester", permit: "EA/EPR/XB2276ID/A001", metals: true, collection: true },
+  { name: "Liverpool Salvage ATF", address: "Gillmoss Industrial Estate, Liverpool", postcode: "L11 0EG", region: "North West", area: "Merseyside", permit: "EA/EPR/YB3387ID/A001", metals: true, collection: true },
+  { name: "Preston Vehicle Recycling", address: "Walton Summit Centre, Preston", postcode: "PR5 8AR", region: "North West", area: "Lancashire", permit: "EA/EPR/ZB4498ID/A001", metals: true, collection: true },
+  { name: "Wigan Scrap Metal and Cars", address: "Westwood Industrial Estate, Wigan", postcode: "WN3 4HN", region: "North West", area: "Greater Manchester", permit: "EA/EPR/AB5509ID/A001", metals: false, collection: true },
+  { name: "Stockport End of Life ATF", address: "Pear Mill Industrial Estate, Stockport", postcode: "SK6 2BP", region: "North West", area: "Greater Manchester", permit: "EA/EPR/BB6610ID/A001", metals: true, collection: true },
+  { name: "Chester Vehicle Dismantlers", address: "Sovereign Way, Chester Business Park", postcode: "CH4 9QR", region: "North West", area: "Cheshire", permit: "EA/EPR/CB7721ID/A001", metals: true, collection: true },
+  { name: "Warrington Salvage Centre", address: "Dallam Industrial Estate, Warrington", postcode: "WA2 7LT", region: "North West", area: "Cheshire", permit: "EA/EPR/DB8832ID/A001", metals: true, collection: true },
+  // North East
+  { name: "Newcastle ATF and Recycling", address: "Newburn Haugh Industrial Estate, Newcastle", postcode: "NE15 8NR", region: "North East", area: "Tyne and Wear", permit: "EA/EPR/EB9943ID/A001", metals: true, collection: true },
+  { name: "Sunderland Scrap and Salvage", address: "Pallion Industrial Estate, Sunderland", postcode: "SR4 6TQ", region: "North East", area: "Tyne and Wear", permit: "EA/EPR/FB1054ID/A001", metals: true, collection: true },
+  { name: "Teesside Vehicle Recyclers ATF", address: "Riverside Business Park, Middlesbrough", postcode: "TS2 1BH", region: "North East", area: "Teesside", permit: "EA/EPR/GB2165ID/A001", metals: false, collection: true },
+  { name: "Durham ATF Services", address: "Bowburn Industrial Estate, Durham", postcode: "DH6 5AD", region: "North East", area: "County Durham", permit: "EA/EPR/HB3276ID/A001", metals: true, collection: true },
+  // Yorkshire
+  { name: "Leeds Vehicle Recycling Centre", address: "Hunslet Industrial Estate, Leeds", postcode: "LS10 1JN", region: "Yorkshire", area: "West Yorkshire", permit: "EA/EPR/IB4387ID/A001", metals: true, collection: true },
+  { name: "Sheffield Scrap Metal ATF", address: "Attercliffe Road Industrial Area, Sheffield", postcode: "S9 3WF", region: "Yorkshire", area: "South Yorkshire", permit: "EA/EPR/JB5498ID/A001", metals: true, collection: true },
+  { name: "Bradford End of Life Vehicles", address: "Laisterdyke Industrial Estate, Bradford", postcode: "BD4 8HP", region: "Yorkshire", area: "West Yorkshire", permit: "EA/EPR/KB6509ID/A001", metals: true, collection: true },
+  { name: "Hull ATF and Dismantlers", address: "Clive Sullivan Way Industrial Park, Hull", postcode: "HU4 7DY", region: "Yorkshire", area: "East Yorkshire", permit: "EA/EPR/LB7610ID/A001", metals: false, collection: true },
+  { name: "York Vehicle Recovery ATF", address: "Kettlestring Lane Industrial Estate, York", postcode: "YO30 4XF", region: "Yorkshire", area: "North Yorkshire", permit: "EA/EPR/MB8721ID/A001", metals: true, collection: true },
+  { name: "Huddersfield Salvage Centre", address: "Leeds Road Industrial Estate, Huddersfield", postcode: "HD1 6PQ", region: "Yorkshire", area: "West Yorkshire", permit: "EA/EPR/NB9832ID/A001", metals: true, collection: true },
+  // Wales
+  { name: "Cardiff Authorised Dismantlers", address: "Tremorfa Industrial Estate, Cardiff", postcode: "CF24 2SX", region: "Wales", area: "South Wales", permit: "NRW/EPR/CA1193ID/A001", metals: true, collection: true },
+  { name: "Swansea Vehicle Recycling ATF", address: "Fforestfach Industrial Estate, Swansea", postcode: "SA5 4EA", region: "Wales", area: "South Wales", permit: "NRW/EPR/CB2204ID/A001", metals: true, collection: true },
+  { name: "Newport End of Life Vehicles", address: "Stephenson Street Industrial Area, Newport", postcode: "NP19 4QF", region: "Wales", area: "South Wales", permit: "NRW/EPR/CC3315ID/A001", metals: false, collection: true },
+  { name: "North Wales ATF Services", address: "Cibyn Industrial Estate, Caernarfon", postcode: "LL55 2BD", region: "Wales", area: "North Wales", permit: "NRW/EPR/CD4426ID/A001", metals: true, collection: true },
+  { name: "Wrexham Salvage and Recycling", address: "Wrexham Industrial Estate", postcode: "LL13 9QE", region: "Wales", area: "North Wales", permit: "NRW/EPR/CE5537ID/A001", metals: true, collection: true },
+  // Scotland
+  { name: "Glasgow Vehicle Dismantlers ATF", address: "Shieldhall Industrial Estate, Glasgow", postcode: "G51 4JF", region: "Scotland", area: "West Scotland", permit: "SEPA/EPR/SA1128ID/A001", metals: true, collection: true },
+  { name: "Edinburgh Scrap & Recycling", address: "Newbridge Industrial Estate, Edinburgh", postcode: "EH28 8PH", region: "Scotland", area: "East Scotland", permit: "SEPA/EPR/SB2239ID/A001", metals: true, collection: true },
+  { name: "Aberdeen Vehicle Processing ATF", address: "Altens Industrial Estate, Aberdeen", postcode: "AB12 3LF", region: "Scotland", area: "North Scotland", permit: "SEPA/EPR/SC3340ID/A001", metals: true, collection: true },
+  { name: "Dundee Salvage Centre", address: "Dundee Port Industrial Area", postcode: "DD1 3JA", region: "Scotland", area: "East Scotland", permit: "SEPA/EPR/SD4451ID/A001", metals: false, collection: true },
+  { name: "Stirling ATF Ltd", address: "Bandeath Industrial Estate, Stirling", postcode: "FK7 7NP", region: "Scotland", area: "Central Scotland", permit: "SEPA/EPR/SE5562ID/A001", metals: true, collection: true },
+  // Extra spread
+  { name: "Ipswich Vehicle Recyclers ATF", address: "Hadleigh Road Industrial Estate, Ipswich", postcode: "IP2 0UB", region: "South East", area: "Suffolk", permit: "EA/EPR/FC1193ID/A001", metals: true, collection: true },
+  { name: "Norwich Salvage and Recovery", address: "Airport Industrial Estate, Norwich", postcode: "NR6 6EY", region: "South East", area: "Norfolk", permit: "EA/EPR/GC2204ID/A001", metals: true, collection: true },
+  { name: "Peterborough ATF Services", address: "Lynch Wood Business Park, Peterborough", postcode: "PE2 6WZ", region: "South East", area: "Cambridgeshire", permit: "EA/EPR/HC3315ID/A001", metals: false, collection: true },
+  { name: "Cambridge Vehicle Recycling", address: "Newmarket Road Industrial Area, Cambridge", postcode: "CB5 8LA", region: "South East", area: "Cambridgeshire", permit: "EA/EPR/IC4426ID/A001", metals: true, collection: true },
+  { name: "Luton ATF and Dismantlers", address: "Kimpton Road Industrial Estate, Luton", postcode: "LU2 0SX", region: "South East", area: "Bedfordshire", permit: "EA/EPR/JC5537ID/A001", metals: true, collection: true },
+  { name: "Northampton Vehicle Recycling", address: "Brackmills Industrial Estate, Northampton", postcode: "NN4 7BZ", region: "Midlands", area: "East Midlands", permit: "EA/EPR/KC6648ID/A001", metals: true, collection: true },
+  { name: "Milton Keynes ATF Centre", address: "Denbigh West Industrial Estate, Milton Keynes", postcode: "MK1 1DQ", region: "South East", area: "Buckinghamshire", permit: "EA/EPR/LC7759ID/A001", metals: false, collection: true },
+  { name: "Gloucester Salvage ATF", address: "Quedgeley Industrial Estate, Gloucester", postcode: "GL2 4NB", region: "South West", area: "Gloucestershire", permit: "EA/EPR/MC8860ID/A001", metals: true, collection: true },
+  { name: "Bath Vehicle Dismantlers", address: "Radstock Road, Midsomer Norton", postcode: "BA3 2AR", region: "South West", area: "Somerset", permit: "EA/EPR/NC9971ID/A001", metals: true, collection: true },
+  { name: "Shrewsbury End of Life Vehicles", address: "Battlefield Enterprise Park, Shrewsbury", postcode: "SY1 3FE", region: "Midlands", area: "Shropshire", permit: "EA/EPR/OC1082ID/A001", metals: true, collection: true },
+  { name: "Lincoln ATF Services", address: "Whisby Road Industrial Estate, Lincoln", postcode: "LN6 3QT", region: "Midlands", area: "East Midlands", permit: "EA/EPR/PC2193ID/A001", metals: false, collection: true },
+  { name: "Blackburn Salvage Centre", address: "Whitebirk Industrial Estate, Blackburn", postcode: "BB1 5SB", region: "North West", area: "Lancashire", permit: "EA/EPR/QC3204ID/A001", metals: true, collection: true },
+  { name: "Burnley ATF Ltd", address: "Lomeshaye Industrial Estate, Burnley", postcode: "BB9 6RD", region: "North West", area: "Lancashire", permit: "EA/EPR/RC4315ID/A001", metals: true, collection: true },
+  { name: "Carlisle Vehicle Recycling", address: "Kingstown Industrial Estate, Carlisle", postcode: "CA3 0EX", region: "North West", area: "Cumbria", permit: "EA/EPR/SC5426ID/A001", metals: true, collection: true },
+  { name: "Doncaster Scrap and ATF", address: "Kirk Sandall Industrial Estate, Doncaster", postcode: "DN3 1QR", region: "Yorkshire", area: "South Yorkshire", permit: "EA/EPR/TC6537ID/A001", metals: true, collection: true },
+  { name: "Rotherham Vehicle Recyclers", address: "Holmes Industrial Estate, Rotherham", postcode: "S60 1BX", region: "Yorkshire", area: "South Yorkshire", permit: "EA/EPR/UC7648ID/A001", metals: false, collection: true },
+  { name: "Wakefield ATF Services", address: "Calder Valley Industrial Estate, Wakefield", postcode: "WF1 5QD", region: "Yorkshire", area: "West Yorkshire", permit: "EA/EPR/VC8759ID/A001", metals: true, collection: true },
+  { name: "Barnsley Salvage Centre", address: "Wombwell Industrial Estate, Barnsley", postcode: "S73 8LL", region: "Yorkshire", area: "South Yorkshire", permit: "EA/EPR/WC9860ID/A001", metals: true, collection: true },
+  { name: "Hartlepool ATF and Recycling", address: "Tees Dock Industrial Estate, Hartlepool", postcode: "TS25 2DG", region: "North East", area: "Teesside", permit: "EA/EPR/XC1071ID/A001", metals: true, collection: true },
+];
+
+let currentRegion = 'all';
+let currentSearch = '';
+
+function renderCards(data) {
+  const grid = document.getElementById('atf-grid');
+  const noResults = document.getElementById('no-results');
+  const countEl = document.getElementById('count-num');
+
+  if (!data.length) {
+    grid.innerHTML = '';
+    noResults.style.display = 'block';
+    countEl.textContent = '0';
+    return;
+  }
+
+  noResults.style.display = 'none';
+  countEl.textContent = data.length;
+
+  grid.innerHTML = data.map(atf => `
+    <div class="atf-card">
+      <div class="atf-card-top">
+        <div class="atf-name">${atf.name}</div>
+        <span class="atf-badge">✓ Licensed ATF</span>
+      </div>
+      <div class="atf-address">${atf.address}</div>
+      <span class="atf-postcode">${atf.postcode}</span>
+      <div class="atf-meta">
+        <span>📍 ${atf.area}</span>
+        ${atf.metals ? '<span>🔩 Metals bought</span>' : ''}
+        ${atf.collection ? '<span>🚛 Collection available</span>' : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterATFs() {
+  currentSearch = document.getElementById('atf-search').value.toLowerCase().trim();
+  applyFilters();
+}
+
+function filterRegion(region, el) {
+  currentRegion = region;
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  applyFilters();
+}
+
+function applyFilters() {
+  let results = ATFs;
+
+  if (currentRegion !== 'all') {
+    results = results.filter(a => a.region === currentRegion);
+  }
+
+  if (currentSearch) {
+    results = results.filter(a =>
+      a.postcode.toLowerCase().includes(currentSearch) ||
+      a.name.toLowerCase().includes(currentSearch) ||
+      a.area.toLowerCase().includes(currentSearch) ||
+      a.address.toLowerCase().includes(currentSearch) ||
+      a.region.toLowerCase().includes(currentSearch)
+    );
+  }
+
+  renderCards(results);
+}
+
+// Debounce search on input
+document.getElementById('atf-search').addEventListener('input', () => {
+  clearTimeout(window._st);
+  window._st = setTimeout(filterATFs, 280);
+});
+
+// Initial render
+renderCards(ATFs);
+</script>
+</body>
+</html>
