@@ -11,14 +11,14 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrap Car Check | Get the Best Scrap Car Price in Seconds</title>
-  <meta name="description" content="Find out what your scrap car is worth instantly. Enter your reg plate, compare quotes from UK scrap dealers and get paid today. Free, no obligation.">
+  <title>Scrap My Car | Compare UK Scrap Car Prices &amp; Get Free Collection | ScrapCarCheck.co.uk</title>
+  <meta name="description" content="Scrap my car the smart way. Compare quotes from licensed UK scrap dealers, get free collection and a Certificate of Destruction. Instant prices, paid by bank transfer.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://scrapcarcheck.co.uk/">
   <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Scrap Car Check | Get the Best Scrap Car Price in Seconds">
+  <meta property="og:title" content="Scrap My Car | Compare UK Scrap Car Prices &amp; Get Free Collection | ScrapCarCheck.co.uk">
   <meta property="og:description" content="Enter your reg, compare scrap quotes from trusted UK dealers and get the best price for your car today.">
   <meta property="og:url" content="https://scrapcarcheck.co.uk/">
   <meta property="og:type" content="website">
@@ -29,13 +29,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Scrap Car Check",
-    "url": "https://scrapcarcheck.co.uk",
-    "description": "Free UK scrap car price comparison. Enter your reg plate to get instant quotes from authorised treatment facilities and scrap dealers.",
+    "name": "ScrapCarCheck",
+    "url": "https://scrapcarcheck.co.uk/",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://scrapcarcheck.co.uk/quote/?reg={reg}",
-      "query-input": "required name=reg"
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://scrapcarcheck.co.uk/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
     }
   }
   </script>
@@ -71,8 +73,8 @@
 <section class="hero">
   <div class="container">
     <div class="hero-badge">&#x1F1EC;&#x1F1E7; Compare UK Scrap Dealers in Seconds</div>
-    <h1>What's Your Scrap Car Worth?</h1>
-    <p class="hero-sub">Enter your reg plate and get instant quotes from up to 5 authorised scrap dealers. Free, no obligation, takes 60 seconds.</p>
+    <h1>Scrap My Car — Compare UK Scrap Dealers Instantly</h1>
+    <p class="hero-sub">Ready to scrap your car? ScrapCarCheck.co.uk compares licensed scrap dealers across the UK so you get the best price every time. Enter your reg plate and get instant quotes from up to 5 authorised dealers. Free, no obligation, takes 60 seconds.</p>
 
     <!-- REG LOOKUP FORM -->
     <div class="reg-form-card" id="reg-form">
@@ -603,6 +605,31 @@
   </div>
 </section>
 
+<!-- INTERNAL LINKS / GUIDES -->
+<section class="guides-section">
+  <div class="container">
+    <h2 class="section-title">Useful Guides and Tools</h2>
+    <p class="section-sub">Everything you need to get the best scrap car price and understand the process.</p>
+    <div class="guides-grid">
+      <a href="/scrap-car-value-calculator/" class="guide-card">
+        <span class="guide-icon">🧮</span>
+        <span class="guide-title">Free scrap car value calculator</span>
+        <span class="guide-desc">Enter your reg and mileage to get an instant estimate before you request quotes.</span>
+      </a>
+      <a href="/guides/how-to-scrap-a-car/" class="guide-card">
+        <span class="guide-icon">📋</span>
+        <span class="guide-title">How to scrap a car: step by step guide</span>
+        <span class="guide-desc">A plain English walkthrough covering paperwork, DVLA notification and what to expect on collection day.</span>
+      </a>
+      <a href="/scrap-car-prices/" class="guide-card">
+        <span class="guide-icon">💷</span>
+        <span class="guide-title">UK scrap car prices 2026</span>
+        <span class="guide-desc">Live average scrap prices by vehicle type, updated monthly against current scrap metal market data.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <section class="cta-band">
   <div class="container">
@@ -644,28 +671,35 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How is the scrap price calculated?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Scrap car prices are based primarily on the weight of your vehicle multiplied by the current scrap steel and non-ferrous metal price. Your car's make, model and condition also affect the final figure." }
+      "name": "How do I scrap my car in the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To scrap your car in the UK, get quotes from multiple licensed Authorised Treatment Facilities (ATFs), choose the best offer, arrange free collection, and receive payment by bank transfer. You must also notify the DVLA using the V5C logbook."
+      }
     },
     {
       "@type": "Question",
-      "name": "Is collection really free?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All dealers in our network offer free collection within their operating area. If you are outside a dealer's zone, they may charge a small collection fee, which will always be disclosed before you accept a quote." }
+      "name": "How much will I get for scrapping my car?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most cars fetch between £100 and £400 when scrapped in 2026. The exact amount depends on the car's weight, make, model, condition and current scrap metal prices. Use our calculator for an instant estimate."
+      }
     },
     {
       "@type": "Question",
-      "name": "Do I need the V5C logbook to scrap my car?",
-      "acceptedAnswer": { "@type": "Answer", "text": "You do not need your V5C to scrap your car. However, you should tell the DVLA that you have scrapped the vehicle. Your scrapping dealer will give you a Certificate of Destruction." }
+      "name": "Is scrap car collection free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Licensed scrap car dealers in the UK provide free collection from your home or workplace, including for non-runners. Collection is typically arranged within 24 to 48 hours."
+      }
     },
     {
       "@type": "Question",
-      "name": "How quickly will I get paid?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Most authorised scrap dealers pay by bank transfer on the day of collection or the next working day. Cash in hand is no longer legal for scrap metal sales." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I scrap a car that doesn't run?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. All the dealers on our platform collect non-runners using a flatbed truck or trailer." }
+      "name": "Do I need an MOT to scrap my car?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You do not need a valid MOT to scrap your car. Scrapping is a legal and straightforward process regardless of the vehicle's roadworthiness."
+      }
     }
   ]
 }

@@ -229,4 +229,56 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Scrap value by make and model -->
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/ford-focus/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/vauxhall-astra/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/vw-golf/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/bmw-3-series/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/ford-fiesta/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/vauxhall-corsa/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/toyota-prius/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/nissan-qashqai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/volkswagen-polo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/scrap-value/ford-transit/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
