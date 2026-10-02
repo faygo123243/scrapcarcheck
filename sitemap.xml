@@ -285,5 +285,55 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/best-time-to-scrap-a-car/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-insurance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-vs-selling-privately/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/how-to-get-best-scrap-car-price/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-outstanding-finance/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/what-happens-to-a-scrapped-car/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-collection-what-to-expect/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/can-you-scrap-a-car-without-keys/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/scrap-car-tax-refund/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scrapcarcheck.co.uk/guides/most-scrapped-cars-uk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
